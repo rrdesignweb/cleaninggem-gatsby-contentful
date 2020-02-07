@@ -1,0 +1,39 @@
+nav {
+  background-color: #f8f8f8;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  overflow: visible;
+  .nav__item--logo {
+    height: 50px;
+  }
+  .nav__items {
+    background-color: transparent;
+    padding: 0 10%;
+    border: none;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .nav__item--left {
+      margin-right: auto;
+    }
+    .nav__item--link {
+      font-family: Muli, sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #3f7a39;
+      transition: all 0.3s ease 0s;
+      text-decoration: none;
+      margin-left: 40px;
+      &:hover {
+        color: #c85c4b;
+      }
+    }
+    .active {
+      color: #c85c4b;
+    }
+  }
+}
