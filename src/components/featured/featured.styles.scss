@@ -1,3 +1,5 @@
+@import "../../constants/_variables.styles.scss";
+
 .header__hero {
   background-position: center;
   background-size: cover;
@@ -47,6 +49,6 @@
   font-size: 18px;
   line-height: 24px;
   font-weight: 300;
-  color: #fff;
+  color: $white;
   margin: 0 0 30px 0;
 }

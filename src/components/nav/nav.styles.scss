@@ -1,5 +1,7 @@
+@import "../../constants/_variables.styles.scss";
+
 nav {
-  background-color: #f8f8f8;
+  background-color: $white;
   position: fixed;
   top: 0;
   left: 0;
@@ -24,16 +26,16 @@ nav {
       font-family: Muli, sans-serif;
       font-size: 18px;
       font-weight: 700;
-      color: #3f7a39;
+      color: $primaryGreen;
       transition: all 0.3s ease 0s;
       text-decoration: none;
       margin-left: 40px;
       &:hover {
-        color: #c85c4b;
+        color: $primaryRed;
       }
     }
     .active {
-      color: #c85c4b;
+      color: $primaryRed;
     }
   }
 }

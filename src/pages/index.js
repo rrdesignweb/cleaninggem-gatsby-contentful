@@ -1,6 +1,7 @@
 import React from "react"
-import Featured from "../components/featured/featured.component"
 import Nav from "../components/nav/nav.component"
+import Featured from "../components/featured/featured.component"
+import About from "../components/about/about.component"
 
 import Layout from "../components/layout/layout.component"
 import SEO from "../components/seo"
@@ -11,6 +12,7 @@ const IndexPage = () => {
       <SEO title="Home" />
       <Nav/>
       <Featured />
+      <About />
     </Layout>
   )
 }

@@ -1,5 +1,7 @@
+@import "../../constants/_variables.styles.scss";
+
 body {
-  background-color: white;
+  background-color: $white;
   margin: 0 auto;
   padding: 0 10%;
   max-width: 1200px;
@@ -10,15 +12,15 @@ h1 {
   font-size: 48px;
   font-weight: 400;
   line-height: 55px;
-  color: #fff;
+  color: $white;
 }
 
 .btn__med {
   width: 124px;
   height: 38px;
   border-radius: 5px;
-  background-color: #f06666;
-  color: #ffffff;
+  background-color: $primaryRed;
+  color: $white;
   border: none;
   font-family: Muli, sans-serif;
   font-size: 14px;

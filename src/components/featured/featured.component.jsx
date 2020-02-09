@@ -16,7 +16,7 @@ export default () => (
             node {
               id
               title
-              subtitle
+              subTitle
               buttonText
               slug
               heroImage {
@@ -43,7 +43,7 @@ export default () => (
             <div className="header__content">
               <div className="header__info">
                 <h1 className="header__title">{edge.node.title}</h1>
-                <p className="header__subtitle">{edge.node.subtitle}</p>
+                <p className="header__subtitle">{edge.node.subTitle}</p>
                 <button
                   onClick={() => navigate(`/pages/${edge.node.slug}`)}
                   className="btn__med"
