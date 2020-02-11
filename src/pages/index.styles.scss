@@ -1,0 +1,16 @@
+@import "../constants/_variables.styles.scss";
+
+.view__more {
+  font-family: $bodyText;
+  font-size: 18px;
+  line-height: 24px;
+  color: $primaryGreen;
+  font-weight:400;
+  text-align: center;
+  margin-bottom: 40px;
+  display: block;
+  text-decoration: none;
+  &:hover {
+    color: $primaryRed;
+  }
+}

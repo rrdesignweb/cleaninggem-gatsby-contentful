@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, navigate, StaticQuery } from "gatsby"
 
-import "./featured.styles.scss"
+import "./home-featured.styles.scss"
 
 export default () => (
   <StaticQuery
@@ -45,7 +45,7 @@ export default () => (
                 <h1 className="header__title">{edge.node.title}</h1>
                 <p className="header__subtitle">{edge.node.subTitle}</p>
                 <button
-                  onClick={() => navigate(`/pages/${edge.node.slug}`)}
+                  onClick={() => navigate(`/${edge.node.slug}`)}
                   className="btn__med"
                 >
                   {edge.node.buttonText}

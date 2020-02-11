@@ -7,12 +7,26 @@ body {
   max-width: 1200px;
 }
 
+p {
+  font-family: $bodyText;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+}
+
 h1 {
-  font-family: Baskerville, serif;
+  font-family: $headingText;
   font-size: 48px;
   font-weight: 400;
   line-height: 55px;
   color: $white;
+}
+
+h3 {
+  font-family: $headingText;
+  font-size: 24px;
+  font-weight: 400;
+  color: $primaryGreen;
 }
 
 .btn__med {
@@ -22,7 +36,7 @@ h1 {
   background-color: $primaryRed;
   color: $white;
   border: none;
-  font-family: Muli, sans-serif;
+  font-family: $bodyText;
   font-size: 14px;
   font-weight: 300;
   transition: all 0.3s ease 0s;

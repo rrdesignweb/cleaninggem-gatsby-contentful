@@ -12,7 +12,7 @@
   margin-left: -50vw;
   margin-right: -50vw;
   z-index: -1;
-  .header__hero:before {
+  &::before {
     content: "";
     position: absolute;
     top: 0;
@@ -21,9 +21,9 @@
     left: 0;
     background-image: linear-gradient(
       to bottom,
-      rgba(10, 10, 10, 0.6) 0%,
-      rgba(10, 10, 10, 0.6) 60%,
-      rgba(10, 10, 10, 1) 100%
+      rgba(10, 10, 10, 0.2) 0%,
+      rgba(10, 10, 10, 0.35) 35%,
+      rgba(10, 10, 10, 0.55) 55%
     );
   }
 }
@@ -45,7 +45,7 @@
 }
 
 .header__subtitle {
-  font-family: Muli, sans-serif;
+  font-family: $bodyText;
   font-size: 18px;
   line-height: 24px;
   font-weight: 300;

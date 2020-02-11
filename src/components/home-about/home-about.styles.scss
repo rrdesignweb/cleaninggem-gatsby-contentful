@@ -1,0 +1,19 @@
+@import "../../constants/_variables.styles.scss";
+
+.section__title {
+  color: $primaryGreen;
+  text-align: center;
+}
+.about__column--wrapper {
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  column-gap: 20px;
+  .img__alignCenter {
+    margin: 0 auto;
+    display: flex;
+  }
+
+  @media (min-width: 400px) and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}

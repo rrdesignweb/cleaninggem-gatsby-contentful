@@ -28,20 +28,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `baskerville\:400`,
-          `muli\:300,700`,
-        ]
-      }
+        fonts: [`baskerville\:400`, `muli\:300,700`],
+      },
     },
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `CleaningGem Melbourne`,
+        short_name: `CleaningGem`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

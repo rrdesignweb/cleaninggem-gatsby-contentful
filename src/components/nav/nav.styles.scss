@@ -23,7 +23,7 @@ nav {
       margin-right: auto;
     }
     .nav__item--link {
-      font-family: Muli, sans-serif;
+      font-family: $bodyText;
       font-size: 18px;
       font-weight: 700;
       color: $primaryGreen;
@@ -32,6 +32,18 @@ nav {
       margin-left: 40px;
       &:hover {
         color: $primaryRed;
+      }
+    }
+    .nav__item--phone {
+      color: $primaryRed;
+      font-family: $bodyText;
+      font-size: 18px;
+      font-weight: 700;
+      transition: all 0.3s ease 0s;
+      text-decoration: none;
+      margin-left: 40px;
+      &:hover {
+        color: darken($primaryRed, 20%);
       }
     }
     .active {
