@@ -25,7 +25,7 @@ nav {
     .nav__item--link {
       font-family: $bodyText;
       font-size: 18px;
-      font-weight: 700;
+      font-weight: 400;
       color: $primaryGreen;
       transition: all 0.3s ease 0s;
       text-decoration: none;
@@ -42,12 +42,24 @@ nav {
       transition: all 0.3s ease 0s;
       text-decoration: none;
       margin-left: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 4px solid $primaryRed;
+      margin-bottom: -15px;
+      margin-top: -10px;
+      height: 90px;
       &:hover {
         color: darken($primaryRed, 20%);
+        border-bottom: 4px solid darken($primaryRed, 20%);
+        img {
+          filter: brightness(75%);
+        }
       }
     }
     .active {
       color: $primaryRed;
+      font-weight:700;
     }
   }
 }

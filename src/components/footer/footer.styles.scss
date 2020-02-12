@@ -1,0 +1,29 @@
+@import "../../constants/variables.styles";
+
+.footer {
+  .social {
+    display: flex;
+    justify-content: center;
+    img {
+      padding: 12px;
+    }
+
+    .facebook {
+      &:hover {
+        filter: brightness(75%);
+      }
+      width: 16px;
+    }
+    .instagram {
+      width: 35px;
+      &:hover {
+        filter: brightness(75%);
+      }
+    }
+  }
+
+  p {
+    font-family: $bodyText;
+    text-align: center;
+  }
+}

@@ -56,7 +56,6 @@ const Nav = () => (
         <img src={phoneIcon} alt="Phone 0427 877 811" />
         &nbsp;0427 877 811
       </a>
-
     </div>
   </nav>
 )

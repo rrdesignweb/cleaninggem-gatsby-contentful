@@ -4,14 +4,16 @@ import Layout from "../components/layout/layout.component"
 import Footer from "../components/footer/footer.component"
 import SEO from "../components/seo"
 
-const NotFoundPage = () => (
+const TestimonialsPage = () => (
   <Layout>
-    <SEO title="404: Not found" />
+    <SEO title="Testimonials Page" />
     <Nav />
-    <h1>NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <section className="section__wrapper">
+      <h1>Testimonials</h1>
+      <p>Testimonials Page</p>
+    </section>
     <Footer />
   </Layout>
 )
 
-export default NotFoundPage
+export default TestimonialsPage

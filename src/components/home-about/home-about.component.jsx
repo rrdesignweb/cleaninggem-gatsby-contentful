@@ -39,37 +39,29 @@ const AboutPage = () => {
         }
       `}
       render={data => (
-        <header>
+        <section>
           {data.allContentfulAbout.edges.map(edge => (
-            <div key={edge.node.id}>
+            <div key={edge.node.id} className="section__wrapper">
               <div>
+                <h1 className="section__title">{edge.node.title}</h1>
+              </div>
+              <div className="about__column--wrapper">
                 <div>
-                  <h1 className="section__title">{edge.node.title}</h1>
+                  {documentToReactComponents(edge.node.columnOne.json, options)}
                 </div>
-                <div className="about__column--wrapper">
-                  <div>
-                    {documentToReactComponents(
-                      edge.node.columnOne.json,
-                      options
-                    )}
-                  </div>
-                  <div>
-                    {documentToReactComponents(
-                      edge.node.columnTwo.json,
-                      options
-                    )}
-                  </div>
-                  <div>
-                    {documentToReactComponents(
-                      edge.node.columnThree.json,
-                      options
-                    )}
-                  </div>
+                <div>
+                  {documentToReactComponents(edge.node.columnTwo.json, options)}
+                </div>
+                <div>
+                  {documentToReactComponents(
+                    edge.node.columnThree.json,
+                    options
+                  )}
                 </div>
               </div>
             </div>
           ))}
-        </header>
+        </section>
       )}
     />
   )

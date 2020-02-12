@@ -42,8 +42,7 @@ const BlogTemplate = ({ data }) => {
   return (
     <Layout>
       <SEO title={post.seoTitle} description={post.seoDescription} />
-      <Nav />
-      <div className="blog__header">
+      <header className="blog__header">
         <div
           className="blog__hero"
           style={{ backgroundImage: `url(${post.featuredImage.fluid.src})` }}
@@ -51,8 +50,9 @@ const BlogTemplate = ({ data }) => {
         <div className="blog__info">
           <h1 className="blog__title">{post.title}</h1>
         </div>
-      </div>
-      <div className="blog__wrapper">
+      </header>
+      <Nav />
+      <section className="blog__wrapper">
         <div className="blog__content">
           <div
             dangerouslySetInnerHTML={{
@@ -60,7 +60,7 @@ const BlogTemplate = ({ data }) => {
             }}
           ></div>
         </div>
-      </div>
+      </section>
     </Layout>
   )
 }

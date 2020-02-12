@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21.609" height="17.33" viewBox="0 0 21.609 17.33">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.499" cy="0.499" r="1.116" gradientTransform="matrix(0.792, 0.006, -0.005, 1, 0.105, -0.003)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#86c440"/>
+      <stop offset="0.63" stop-color="#518e3b"/>
+      <stop offset="1" stop-color="#377338"/>
+    </radialGradient>
+  </defs>
+  <g id="leaf" transform="translate(-99.396 -0.004)">
+    <path id="Path_15" data-name="Path 15" d="M1298.333,1086.741c-.244-8.644,7.643-9.055,13.3-11.728-6.14.915-13.03,3.127-14.7,9.358-2.137-2.847-.084-6.86,1.467-8.256,3.832-3.458,11.368-2.212,15.847-4.156.865-.374,1.594-1.415,2.371-1.166C1314.38,1079.612,1309.189,1088.993,1298.333,1086.741Z" transform="translate(-1196.616 -1069.745)" fill="#70bf44" fill-rule="evenodd"/>
+    <path id="Path_16" data-name="Path 16" d="M1309.087,1075.991c-.245-8.644,7.642-9.055,13.3-11.728-6.141.915-13.031,3.127-14.7,9.357-2.138-2.847-.085-6.859,1.466-8.256,3.832-3.458,11.368-2.211,15.848-4.156.865-.374,1.593-1.414,2.37-1.165C1325.133,1068.861,1319.942,1078.242,1309.087,1075.991Z" transform="translate(-1206.365 -1060)" fill-rule="evenodd" fill="url(#radial-gradient)"/>
+    <rect id="Rectangle_10" data-name="Rectangle 10" width="1.123" height="1.226" transform="translate(105.727 11.193)" fill="#fff"/>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="1.124" height="1.226" transform="translate(107.259 11.193)" fill="#fff"/>
+    <rect id="Rectangle_12" data-name="Rectangle 12" width="1.124" height="1.226" transform="translate(107.259 12.783)" fill="#fff"/>
+    <rect id="Rectangle_13" data-name="Rectangle 13" width="1.123" height="1.226" transform="translate(105.727 12.783)" fill="#fff"/>
+  </g>
+</svg>

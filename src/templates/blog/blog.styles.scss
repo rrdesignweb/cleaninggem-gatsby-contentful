@@ -36,6 +36,7 @@
     align-items: center;
     min-height: 460px;
   }
+  
   .blog__title {
     text-align: center;
     max-width: 960px;
@@ -59,8 +60,8 @@
     }
     p {
       font-family: $bodyText;
-      font-size: 18px;
-      line-height: 32px;
+      font-size: 17px;
+      line-height: 24px;
       font-weight: 300;
       color: $dark;
       margin: 40px 0;
