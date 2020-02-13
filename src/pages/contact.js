@@ -8,7 +8,7 @@ const ContactPage = () => (
   <Layout>
     <SEO title="Contact Page" />
     <Nav />
-    <section className="section__wrapper">
+    <section className="block__spacing container">
       <h1>Contact</h1>
       <p>Contact Form and Map Page</p>
     </section>

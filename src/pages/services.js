@@ -9,7 +9,7 @@ const ServicesPage = () => (
     <SEO title="Services Page" />
    
     <Nav />
-    <section className="section__wrapper">
+    <section className="block__spacing container">
       <h1>Services</h1>
       <p>Services Page</p>
     </section>

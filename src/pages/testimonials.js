@@ -8,7 +8,7 @@ const TestimonialsPage = () => (
   <Layout>
     <SEO title="Testimonials Page" />
     <Nav />
-    <section className="section__wrapper">
+    <section className="block__spacing container">
       <h1>Testimonials</h1>
       <p>Testimonials Page</p>
     </section>

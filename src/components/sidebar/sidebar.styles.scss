@@ -1,0 +1,55 @@
+@import "../../constants/variables.styles";
+
+.bm-burger-button {
+  position: fixed;
+  width: 20px;
+  height: 12px;
+  left: 35px;
+  top: 35px;
+}
+.bm-burger-bars {
+  background: $primaryGreen;
+}
+
+.bm-burger-bars-hover {
+  background: darken($primaryGreen, 20%);
+}
+
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+  top: 29px!important;
+  left: 255px;
+}
+.bm-cross {
+  background: $dark;
+}
+.bm-menu-wrap {
+  position: fixed;
+  top:0;
+  height: 100%;
+}
+.bm-menu {
+  background: $white;
+  padding: 2.5em 1em 2.5em 1em;
+  font-size: 1.45em;
+  color: $dark;
+  text-decoration: none;
+}
+.bm-morph-shape {
+  fill: $dark;
+}
+.bm-item-list {
+  color: $dark;
+  padding: 0.8em;
+}
+.bm-item {
+  display: block;
+  text-align: left;
+  padding: 10px 0;
+  text-decoration: none;
+  color: $primaryRed;
+}
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}

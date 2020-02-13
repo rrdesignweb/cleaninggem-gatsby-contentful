@@ -2,9 +2,7 @@
 
 body {
   background-color: $white;
-  margin: 0 auto;
-  padding: 0 10%;
-  max-width: 1200px;
+  margin:0;
 }
 
 p {
@@ -14,13 +12,32 @@ p {
   font-weight: 300;
 }
 
-.section__wrapper {
-  margin: 4rem 0 4rem 0;
+.block__spacing {
+  margin: 3rem 0 3rem 0;
 }
 
 .section__title {
   color: $primaryGreen;
   text-align: center;
+}
+
+.container {
+  padding: 0 10%;
+  max-width: 1200px;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 580px;
+
+  &.green {
+    background-color: $primaryGreen;
+    h1, p {
+      color: $white;
+    }
+  }
 }
 
 h1 {

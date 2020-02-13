@@ -1,6 +1,5 @@
 import React from "react"
-import { graphql, navigate, StaticQuery } from "gatsby"
-
+import { graphql, Link, navigate, StaticQuery } from "gatsby"
 import "./home-blog.styles.scss"
 
 export default () => (
@@ -12,20 +11,18 @@ export default () => (
           sort: { fields: [createdAt], order: DESC }
           filter: { node_locale: { eq: "en-US" }, home: { eq: true } }
         ) {
-          edges {
-            node {
-              id
-              slug
+          nodes {
+            id
+            slug
+            title
+            category {
               title
-              category {
-                title
-                id
-              }
-              featuredImage {
-                fluid(maxWidth: 1200, quality: 85) {
-                  src
-                  ...GatsbyContentfulFluid
-                }
+              id
+            }
+            featuredImage {
+              fluid(maxWidth: 1200, quality: 85) {
+                src
+                ...GatsbyContentfulFluid
               }
             }
           }
@@ -33,34 +30,39 @@ export default () => (
       }
     `}
     render={data => (
-      <section className="section__wrapper">
-        <h1 className="section__title">CleaningGem Blog Feed</h1>
-        <div className="feed">
-          {data.allContentfulBlog.edges.map(edge => (
-            <div
-              key={edge.node.id}
-              className="card"
-              style={{
-                backgroundImage: `linear-gradient(
+      <section className="container-fluid green">
+        <div className="block__spacing container">
+          <h1 className="section__title">CleaningGem Blog Feed</h1>
+          <div className="feed">
+            {data.allContentfulBlog.nodes.map(node => (
+              <div
+                key={node.id}
+                className="card"
+                style={{
+                  backgroundImage: `linear-gradient(
               to bottom, 
               rgba(10,10,10,0) 0%,
               rgba(10,10,10,0) 50%,
               rgba(10,10,10,0.7) 100%),
-              url(${edge.node.featuredImage.fluid.src})`,
-              }}
-              onClick={() => navigate(`/blog/${edge.node.slug}`)}
-              onKeyDown={() => navigate(`/blog/${edge.node.slug}`)}
-              role="button"
-              tabIndex={0}
-            >
-              {edge.node.category.map(category => (
-                <p key={category.id} className="card__category">
-                  {category.title}
-                </p>
-              ))}
-              <p className="card__title">{edge.node.title}</p>
-            </div>
-          ))}
+              url(${node.featuredImage.fluid.src})`,
+                }}
+                onClick={() => navigate(`/blog/${node.slug}`)}
+                onKeyDown={() => navigate(`/blog/${node.slug}`)}
+                role="button"
+                tabIndex={0}
+              >
+                {node.category.map(category => (
+                  <p key={category.id} className="card__category">
+                    {category.title}
+                  </p>
+                ))}
+                <p className="card__title">{node.title}</p>
+              </div>
+            ))}
+          </div>
+          <Link to="/blog" className="view__more--white">
+            View More
+          </Link>
         </div>
       </section>
     )}

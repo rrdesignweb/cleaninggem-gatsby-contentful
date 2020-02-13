@@ -4,6 +4,7 @@
   .social {
     display: flex;
     justify-content: center;
+
     img {
       padding: 12px;
     }
@@ -14,6 +15,7 @@
       }
       width: 16px;
     }
+
     .instagram {
       width: 35px;
       &:hover {
@@ -25,5 +27,6 @@
   p {
     font-family: $bodyText;
     text-align: center;
+    font-size:15px;
   }
 }

@@ -5,7 +5,7 @@ import instagramIcon from "../../images/instagram.svg"
 import "./footer.styles.scss"
 
 const Footer = () => (
-  <footer className="footer">
+  <footer className="footer block__spacing">
     <div className="social">
       <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/cleaninggemmelbourne">
         <img className="facebook" src={facebookIcon} alt="Facebook" />

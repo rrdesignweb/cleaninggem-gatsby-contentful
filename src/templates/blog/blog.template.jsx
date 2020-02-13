@@ -36,7 +36,6 @@ export const query = graphql`
     }
   }
 `
-
 const BlogTemplate = ({ data }) => {
   const post = data.contentfulBlog
   return (

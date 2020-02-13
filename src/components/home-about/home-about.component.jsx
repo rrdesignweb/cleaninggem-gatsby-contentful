@@ -21,18 +21,16 @@ const AboutPage = () => {
       query={graphql`
         query AboutQuery {
           allContentfulAbout {
-            edges {
-              node {
-                title
-                columnOne {
-                  json
-                }
-                columnTwo {
-                  json
-                }
-                columnThree {
-                  json
-                }
+            nodes {
+              title
+              columnOne {
+                json
+              }
+              columnTwo {
+                json
+              }
+              columnThree {
+                json
               }
             }
           }
@@ -40,21 +38,21 @@ const AboutPage = () => {
       `}
       render={data => (
         <section>
-          {data.allContentfulAbout.edges.map(edge => (
-            <div key={edge.node.id} className="section__wrapper">
+          {data.allContentfulAbout.nodes.map(node => (
+            <div key={node.id} className="block__spacing container">
               <div>
-                <h1 className="section__title">{edge.node.title}</h1>
+                <h1 className="section__title">{node.title}</h1>
               </div>
               <div className="about__column--wrapper">
                 <div>
-                  {documentToReactComponents(edge.node.columnOne.json, options)}
+                  {documentToReactComponents(node.columnOne.json, options)}
                 </div>
                 <div>
-                  {documentToReactComponents(edge.node.columnTwo.json, options)}
+                  {documentToReactComponents(node.columnTwo.json, options)}
                 </div>
                 <div>
                   {documentToReactComponents(
-                    edge.node.columnThree.json,
+                    node.columnThree.json,
                     options
                   )}
                 </div>
