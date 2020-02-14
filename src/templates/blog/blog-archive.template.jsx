@@ -57,7 +57,7 @@ const ArchiveTemplate = props => {
         ]}
       />
       <header>
-        <div className="archive__section container">
+        <div className="archive__section container__inner">
           <div className="archive__hero">
             <div className="archive__nav">
               <Link

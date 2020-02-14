@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "cleaninggem-gatsby-contentful",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "CleaningGem site using gatsby starter kit",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Rowan Richardson",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@contentful/rich-text-types": "^14.0.1",

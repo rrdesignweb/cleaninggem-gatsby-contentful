@@ -23,80 +23,84 @@ const Nav = () => {
   const width = useWindowSize()
   if (width > 960) {
     return (
-      <div className="nav__wrapper">
-        <div className="nav__items">
-          <a className="nav__item--left" href="/">
-            <img
-              src={logo}
-              alt="CleaningGem Logo"
-              className="nav__item--logo"
-            />
-          </a>
-          <Link
-            className={
-              window.location.href.indexOf("services") > 0
-                ? "nav__item--link active"
-                : "nav__item--link"
-            }
-            to="/services"
-          >
-            Services
-          </Link>
-          <Link
-            className={
-              window.location.href.indexOf("testimonials") > 0
-                ? "nav__item--link active"
-                : "nav__item--link"
-            }
-            to="/testimonials"
-          >
-            Testimonials
-          </Link>
-          <Link
-            className={
-              window.location.href.indexOf("blog") > 0 ||
-              window.location.href.indexOf("category") > 0
-                ? "nav__item--link active"
-                : "nav__item--link"
-            }
-            to="/blog"
-          >
-            Blog
-          </Link>
-          <Link
-            className={
-              window.location.href.indexOf("contact") > 0
-                ? "nav__item--link active"
-                : "nav__item--link"
-            }
-            to="/contact"
-          >
-            Contact
-          </Link>
-          <a href="tel:0427877811" className="nav__item--phone">
-            <img src={phoneIcon} alt="Phone 0427 877 811" />
-            &nbsp;0427 877 811
-          </a>
+      <nav>
+        <div className="nav__wrapper">
+          <div className="nav__items">
+            <a className="nav__item--left" href="/">
+              <img
+                src={logo}
+                alt="CleaningGem Logo"
+                className="nav__item--logo"
+              />
+            </a>
+            <Link
+              className={
+                window.location.href.indexOf("services") > 0
+                  ? "nav__item--link active"
+                  : "nav__item--link"
+              }
+              to="/services"
+            >
+              Services
+            </Link>
+            <Link
+              className={
+                window.location.href.indexOf("testimonials") > 0
+                  ? "nav__item--link active"
+                  : "nav__item--link"
+              }
+              to="/testimonials"
+            >
+              Testimonials
+            </Link>
+            <Link
+              className={
+                window.location.href.indexOf("blog") > 0 ||
+                window.location.href.indexOf("category") > 0
+                  ? "nav__item--link active"
+                  : "nav__item--link"
+              }
+              to="/blog"
+            >
+              Blog
+            </Link>
+            <Link
+              className={
+                window.location.href.indexOf("contact") > 0
+                  ? "nav__item--link active"
+                  : "nav__item--link"
+              }
+              to="/contact"
+            >
+              Contact
+            </Link>
+            <a href="tel:0427877811" className="nav__item--phone">
+              <img src={phoneIcon} alt="Phone 0427 877 811" />
+              &nbsp;0427 877 811
+            </a>
+          </div>
         </div>
-      </div>
+      </nav>
     )
   } else {
     return (
-      <div className="nav__wrapper">
-        <div className="nav__items">
-          <a className="nav__item--center" href="/">
-            <img
-              src={logo}
-              alt="CleaningGem Logo"
-              className="nav__item--logo"
-            />
-          </a>
-          <a href="tel:0427877811">
-            <img src={phoneIcon} alt="Phone 0427 877 811" />
-          </a>
+      <nav>
+        <div className="nav__wrapper">
+          <div className="nav__items">
+            <a className="nav__item--center" href="/">
+              <img
+                src={logo}
+                alt="CleaningGem Logo"
+                className="nav__item--logo"
+              />
+            </a>
+            <a href="tel:0427877811">
+              <img src={phoneIcon} alt="Phone 0427 877 811" />
+            </a>
+          </div>
+          <Sidebar />
         </div>
-        <Sidebar />
-      </div>
+      </nav>
     )
   }
 }

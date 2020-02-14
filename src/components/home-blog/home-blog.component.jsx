@@ -30,7 +30,7 @@ export default () => (
       }
     `}
     render={data => (
-      <section className="container-fluid green">
+      <section className="container__fluid green">
         <div className="block__spacing container">
           <h1 className="section__title">CleaningGem Blog Feed</h1>
           <div className="feed">
