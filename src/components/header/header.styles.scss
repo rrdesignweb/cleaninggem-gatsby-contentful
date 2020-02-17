@@ -4,4 +4,7 @@
   padding-top: 100px;
   display: flex;
   margin: 0 auto;
+  @media screen and (max-width: 960px) {
+    padding-top: 85px;
+  }
 }

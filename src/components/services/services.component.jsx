@@ -3,33 +3,30 @@ import { graphql, StaticQuery } from "gatsby"
 import { BLOCKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
-import "./home-about.styles.scss"
+import "./services.styles.scss"
 
-const About = () => {
+const Services = () => {
   const options = {
     renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: node => {
         const { title, file } = node.data.target.fields
         const alt = title["en-US"]
         const url = file["en-US"].url
-        return <img alt={alt} src={url} className="img__alignCenter" />
+        return <img alt={alt} src={url} className="center" />
       },
     },
   }
   return (
     <StaticQuery
       query={graphql`
-        query AboutQuery {
-          allContentfulAbout {
+        query ServicesQuery {
+          allContentfulServices(
+            sort: { fields: [createdAt], order: ASC }
+          ) {
             nodes {
               title
-              columnOne {
-                json
-              }
-              columnTwo {
-                json
-              }
-              columnThree {
+              subTitle
+              content {
                 json
               }
             }
@@ -38,25 +35,15 @@ const About = () => {
       `}
       render={data => (
         <section>
-          {data.allContentfulAbout.nodes.map(node => (
+          {data.allContentfulServices.nodes.map(node => (
             <div key={node.id} className="block__spacing container">
               <div>
                 <h1 className="section__title">{node.title}</h1>
               </div>
-              <div className="about__column--wrapper">
-                <div>
-                  {documentToReactComponents(node.columnOne.json, options)}
-                </div>
-                <div>
-                  {documentToReactComponents(node.columnTwo.json, options)}
-                </div>
-                <div>
-                  {documentToReactComponents(
-                    node.columnThree.json,
-                    options
-                  )}
-                </div>
+              <div>
+                <p>{node.subTitle}</p>
               </div>
+              <p>{documentToReactComponents(node.content.json, options)}</p>
             </div>
           ))}
         </section>
@@ -65,4 +52,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Services

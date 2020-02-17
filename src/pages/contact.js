@@ -13,55 +13,43 @@ const ContactPage = () => (
     <Header siteTitle="Contact Us" />
     <Nav />
     <section className="container">
-      <div className="contact__form ">
-        <p>
+      <div className="contact__form container__inner ">
+        <p className="center">
           Please feel free to contact us for a hassle free quote or simply a
-          general enquiry on any of our services.<br/>We look forward to hearing from you.
+          general enquiry on any of our services. We look forward to hearing from you.
         </p>
-     
-        <div className="inner">
+        <div className="contact__form--inner">
           <form
             method="post"
             name="contact"
-            action="/thanks"
+            action="/contact-thanks"
             data-netlify="true"
             netlify-honeypot="bot"
           >
             <input type="hidden" name="form-name" value="contact" />
             <div className="field__hidden">
-              <label for="bot">
-                Don't fill this out human
-                <input name="bot" />
-              </label>
+              <label for="bot">Don't fill this out human</label>
+              <input name="bot" />
             </div>
             <div className="field__group">
-              <label for="name">
-                Name
-                <input type="text" name="name" placeholder="Your Name" />
-              </label>
+              <label for="name">Full Name</label>
+              <input type="text" name="name" />
             </div>
             <div className="field__group">
-              <label for="email">
-                Email
-                <input type="email" name="email" placeholder="Your Email *" />
-              </label>
+              <label for="email">Email*</label>
+              <input type="email" name="email" />
             </div>
             <div className="field__group">
-              <label for="subject">
-                Subject
-                <input type="subject" name="subject" placeholder="Subject" />
-              </label>
+              <label for="subject">Subject</label>
+              <input type="subject" name="subject" />
             </div>
             <div className="field__group">
-              <label for="message">
-                Message
-                <textarea
-                  type="text"
-                  name="message"
-                  rows="6"
-                  placeholder="Your Message *"
-                />
-              </label>
+              <label for="message">Message*</label>
+              <textarea
+                type="text"
+                name="message"
+                rows="6"
+              />
             </div>
             <div className="submit">
               <button type="submit" className="btn__med">

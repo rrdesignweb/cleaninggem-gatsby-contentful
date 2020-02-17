@@ -1,5 +1,18 @@
 @import "../../constants/variables.styles";
 
+.navbar__wrapper-mobile {
+  .navbar__item-mobile {
+    display: flex;
+    text-decoration: none;
+    margin: 20px 0 20px 0;
+    font-family: $bodyText;
+    color: $primaryGreen;
+    font-size: 28px;
+    justify-content: center;
+  }
+}
+
+//Plugin styles
 .bm-burger-button {
   position: fixed;
   width: 20px;
@@ -7,6 +20,7 @@
   left: 35px;
   top: 35px;
 }
+
 .bm-burger-bars {
   background: $primaryGreen;
 }
@@ -18,31 +32,39 @@
 .bm-cross-button {
   height: 24px;
   width: 24px;
-  top: 29px!important;
-  left: 255px;
+  top: 29px !important;
+  right: 29px !important;
 }
+
 .bm-cross {
   background: $dark;
 }
+
 .bm-menu-wrap {
   position: fixed;
-  top:0;
+  top: 0;
   height: 100%;
+  width: 400px !important;
 }
+
 .bm-menu {
   background: $white;
   padding: 2.5em 1em 2.5em 1em;
   font-size: 1.45em;
   color: $dark;
+  width: 100%;
   text-decoration: none;
 }
+
 .bm-morph-shape {
   fill: $dark;
 }
+
 .bm-item-list {
   color: $dark;
   padding: 0.8em;
 }
+
 .bm-item {
   display: block;
   text-align: left;
@@ -50,6 +72,7 @@
   text-decoration: none;
   color: $primaryRed;
 }
+
 .bm-overlay {
   background: rgba(0, 0, 0, 0.5);
 }
