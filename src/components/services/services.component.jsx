@@ -1,28 +1,36 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import { BLOCKS } from "@contentful/rich-text-types"
+import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import "./services.styles.scss"
 
 const Services = () => {
+  const Bold = ({ children }) => <span className="bold">{children}</span>
+  const Text = ({ children }) => <p className="align-center">{children}</p>
+
   const options = {
+    renderMark: {
+      [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+    },
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+    },
     renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: node => {
         const { title, file } = node.data.target.fields
         const alt = title["en-US"]
         const url = file["en-US"].url
-        return <img alt={alt} src={url} className="center" />
+        return <img alt={alt} src={url} className="img__alignCenter" />
       },
     },
   }
+
   return (
     <StaticQuery
       query={graphql`
         query ServicesQuery {
-          allContentfulServices(
-            sort: { fields: [createdAt], order: ASC }
-          ) {
+          allContentfulServices(sort: { fields: [createdAt], order: ASC }) {
             nodes {
               title
               subTitle
