@@ -20,7 +20,8 @@ module.exports.createPages = ({ actions, graphql }) => {
 
   // Create pages for each blog.
   const getBlog = makeRequest(
-    graphql,`
+    graphql,
+    `
       {
         allContentfulBlog(
           sort: { fields: [createdAt], order: DESC }
@@ -47,7 +48,8 @@ module.exports.createPages = ({ actions, graphql }) => {
 
   // Create archive page for all blogs, including pagination
   const getArchive = makeRequest(
-    graphql,`
+    graphql,
+    `
       {
         allContentfulBlog(
           sort: { fields: [createdAt], order: DESC }
@@ -83,7 +85,8 @@ module.exports.createPages = ({ actions, graphql }) => {
 
   // Create travel category page, including pagination
   const getGuide = makeRequest(
-    graphql,`
+    graphql,
+    `
       {
         allContentfulBlog(
           sort: { fields: [createdAt], order: DESC }
@@ -122,7 +125,8 @@ module.exports.createPages = ({ actions, graphql }) => {
 
   // Create guide category page, including pagination
   const getSustainability = makeRequest(
-    graphql,`
+    graphql,
+    `
       {
         allContentfulBlog(
           sort: { fields: [createdAt], order: DESC }
@@ -164,7 +168,8 @@ module.exports.createPages = ({ actions, graphql }) => {
 
   // Create opinion category page, including pagination
   const getProduct = makeRequest(
-    graphql,`
+    graphql,
+    `
       {
         allContentfulBlog(
           sort: { fields: [createdAt], order: DESC }
@@ -203,7 +208,8 @@ module.exports.createPages = ({ actions, graphql }) => {
 
   // Create tech category page, including pagination
   const getTech = makeRequest(
-    graphql,`
+    graphql,
+    `
       {
         allContentfulBlog(
           sort: { fields: [createdAt], order: DESC }
@@ -252,10 +258,10 @@ module.exports.createPages = ({ actions, graphql }) => {
 }
 
 module.exports.onCreateWebpackConfig = ({ stage, actions, getConfig }) => {
-  if (stage === 'build-javascript') {
+  if (stage === "build-javascript") {
     const config = getConfig()
     const miniCssExtractPlugin = config.plugins.find(
-      plugin => plugin.constructor.name === 'MiniCssExtractPlugin'
+      plugin => plugin.constructor.name === "MiniCssExtractPlugin"
     )
     if (miniCssExtractPlugin) {
       miniCssExtractPlugin.options.ignoreOrder = true

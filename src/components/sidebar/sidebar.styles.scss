@@ -6,7 +6,7 @@
     text-decoration: none;
     margin: 20px 0 20px 0;
     font-family: $bodyText;
-    color: $primaryGreen;
+    color: $white;
     font-size: 28px;
     justify-content: center;
   }
@@ -44,14 +44,13 @@
   position: fixed;
   top: 0;
   height: 100%;
-  width: 400px !important;
+  max-width: 400px !important;
 }
 
 .bm-menu {
-  background: $white;
+  background: $primaryGreen;
   padding: 2.5em 1em 2.5em 1em;
   font-size: 1.45em;
-  color: $dark;
   width: 100%;
   text-decoration: none;
 }
