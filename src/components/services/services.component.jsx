@@ -6,12 +6,12 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import "./services.styles.scss"
 
 const Services = () => {
-  const Bold = ({ children }) => <span className="bold">{children}</span>
+  const List = ({ children }) => <li>{children}</li>
   const Text = ({ children }) => <p className="align-center">{children}</p>
 
   const options = {
     renderMark: {
-      [MARKS.BOLD]: text => <Bold>{text}</Bold>,
+      [BLOCKS.UL_LIST]: (node, children) => <List>{children}</List>,
     },
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
@@ -21,7 +21,7 @@ const Services = () => {
         const { title, file } = node.data.target.fields
         const alt = title["en-US"]
         const url = file["en-US"].url
-        return <img alt={alt} src={url} className="img__alignCenter" />
+        return <img alt={alt} src={url} className="right" />
       },
     },
   }
