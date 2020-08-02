@@ -1,12 +1,19 @@
 import React from "react"
-import { slide as Menu } from "react-burger-menu"
 import { Link } from "gatsby"
 
 import "./sidebar.styles.scss"
 
-const Sidebar = () => (
-  <Menu>
-    <div className="navbar__wrapper-mobile">
+const Sidebar = ({ open, setOpenMenu }) => {
+  return (
+    <div id="sidebar" className={`sidebar ${open ? "active" : ""}`}>
+      <a
+        className="sidebar-closebtn"
+        onClick={() => {
+          setOpenMenu(!open)
+        }}
+      >
+        &times;
+      </a>
       <Link className="navbar__item-mobile" to="/services">
         Services
       </Link>
@@ -20,7 +27,7 @@ const Sidebar = () => (
         Contact
       </Link>
     </div>
-  </Menu>
-)
+  )
+}
 
 export default Sidebar

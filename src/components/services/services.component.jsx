@@ -30,6 +30,7 @@ const Services = () => {
         query ServicesQuery {
           allContentfulServices(sort: { fields: [createdAt], order: ASC }) {
             nodes {
+              id
               title
               subTitle
               content {
@@ -47,9 +48,9 @@ const Services = () => {
                 <h1 className="section__title">{node.title}</h1>
               </div>
               <div>
-                <p>{node.subTitle}</p>
+                <div>{node.subTitle}</div>
               </div>
-              <p>{documentToReactComponents(node.content.json, options)}</p>
+              <div>{documentToReactComponents(node.content.json, options)}</div>
             </div>
           ))}
         </section>

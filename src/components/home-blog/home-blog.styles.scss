@@ -6,6 +6,9 @@
   grid-auto-rows: 350px;
   grid-gap: 16px;
   margin: 40px 0 40px 0;
+  &.feed-blog {
+    padding: 0 10%;
+  }
   .card__category {
     font-family: $bodyText;
     font-size: 14px;

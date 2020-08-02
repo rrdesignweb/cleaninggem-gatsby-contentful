@@ -44,13 +44,7 @@
 }
 
 .blog__wrapper {
-  width: 100vw;
-  background-color: $white;
-  left: 50%;
-  right: 50%;
-  position: absolute;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  
   .blog__content {
     max-width: 960px;
     margin: 60px auto;

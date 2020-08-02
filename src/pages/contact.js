@@ -10,9 +10,9 @@ import "./contact.styles.scss"
 const ContactPage = () => (
   <Layout>
     <SEO title="Contact Page" />
-    <Header siteTitle="Contact Us" />
     <Nav />
-    <section className="container">
+    <Header siteTitle="Contact Us" />
+      <section className="container">
       <div className="contact__form container__inner ">
         <p className="center">
           Please feel free to contact us for a hassle free quote or simply a

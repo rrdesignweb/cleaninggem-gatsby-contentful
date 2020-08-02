@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Nav from "../../components/nav/nav.component"
 import Layout from "../../components/layout/layout.component"
+import Footer from "../../components/footer/footer.component"
 import SEO from "../../components/seo"
 
 import "./blog.styles.scss"
@@ -60,6 +61,7 @@ const BlogTemplate = ({ data }) => {
           ></div>
         </div>
       </section>
+      <Footer />
     </Layout>
   )
 }

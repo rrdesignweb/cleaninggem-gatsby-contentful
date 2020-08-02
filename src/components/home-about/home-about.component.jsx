@@ -22,6 +22,7 @@ const About = () => {
         query AboutQuery {
           allContentfulAbout {
             nodes {
+              id
               title
               columnOne {
                 json
@@ -40,7 +41,7 @@ const About = () => {
         <section>
           {data.allContentfulAbout.nodes.map(node => (
             <div key={node.id} className="block__spacing container">
-              <div>
+              <div >
                 <h1 className="section__title">{node.title}</h1>
               </div>
               <div className="about__column--wrapper">

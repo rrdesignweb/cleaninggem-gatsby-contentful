@@ -115,7 +115,7 @@ const ArchiveTemplate = props => {
         </div>
       </header>
       <Nav />
-      <div className="feed container">
+      <div className="feed feed-blog">
         {blogContent.nodes.map(node => (
           <div
             key={node.id}

@@ -1,82 +1,96 @@
 @import "../../constants/_variables.styles.scss";
 
-.nav__wrapper {
-  background: $offwhite;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100px;
-  z-index: 10000;
-  overflow: visible;
-  @media screen and (max-width: 960px) {
-    height: 85px;
-   
-  }
-  .nav__item--logo {
-    height: 50px;
-    @media screen and (max-width: 960px) {
-      height: 45px;
-    }
-  }
-
-  .nav__items {
-    background-color: transparent;
-    padding: 0 10%;
-    border: none;
+nav {
+  .nav__wrapper {
+    background: $offwhite;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100px;
-    @media screen and (max-width: 960px) {
+    z-index: 10000;
+    overflow: visible;
+    display: flex;
+    flex-direction: row;
+    @media screen and (max-width: 850px) {
       height: 85px;
     }
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .nav__item--left {
-      margin-right: auto;
-    }
-    .nav__item--center {
-      margin: 0 auto;
-    }
-    .nav__item--link {
-      font-family: $bodyText;
-      font-size: 18px;
-      font-weight: 400;
-      color: $primaryGreen;
-      transition: all 0.3s ease 0s;
-      text-decoration: none;
-      margin-left: 40px;
-      &:hover {
-        color: $primaryRed;
-      }
-    }
-
-
-    .nav__item--phone {
-      color: $primaryRed;
-      font-family: $bodyText;
-      font-size: 18px;
-      font-weight: 700;
-      transition: all 0.3s ease 0s;
-      text-decoration: none;
-      margin-left: 40px;
+    .nav__items {
       display: flex;
+      width: 1200px;
+      max-width: 1200px;
+      flex-direction: row;
       align-items: center;
-      justify-content: center;
-      border-bottom: 4px solid $primaryRed;
-      margin-bottom: -15px;
-      margin-top: -10px;
-      height: 90px;
-      &:hover {
-        color: darken($primaryRed, 20%);
-        border-bottom: 4px solid darken($primaryRed, 20%);
+      justify-content: space-between;
+      padding: 0 10%;
+      @media screen and (max-width: 1024px) {
+        padding: 0 4%;
+      }
+      margin: 0 auto;
+      .nav__item--logo {
         img {
-          filter: brightness(75%);
+          height: 50px;
+          @media screen and (max-width: 960px) {
+            height: 42px;
+          }
+        }
+      }
+      .nav__item--links-container {
+        .nav__item--link {
+          @media screen and (max-width: 850px) {
+            display: none;
+          }
+          font-family: $bodyText;
+          font-size: 18px;
+          font-weight: 400;
+          color: $primaryGreen;
+          transition: all 0.3s ease 0s;
+          text-decoration: none;
+          margin-left: 40px;
+          &.active {
+            font-weight: 600;
+            color: $primaryRed;
+          }
+          &:hover {
+            color: darken($primaryRed, 20%);
+            img {
+              filter: brightness(75%);
+            }
+          }
+        }
+        .nav__item--phone {
+          color: $primaryRed;
+          font-family: $bodyText;
+          font-size: 18px;
+          font-weight: 700;
+          transition: all 0.3s ease 0s;
+          text-decoration: none;
+          margin-left: 40px;
+          border-bottom: 4px solid $primaryRed;
+          padding-bottom: 35px;
+          @media screen and (max-width: 850px) {
+            border-bottom: none;
+            margin-left: 0px;
+            padding-bottom: 0px;
+          }
+          .nav__item--phone-number {
+            padding-left: 10px;
+            @media screen and (max-width: 850px) {
+              display: none;
+            }
+            &:hover {
+              border-color: darken($primaryRed, 20%);
+            }
+          }
         }
       }
     }
-    .active {
-      color: $primaryRed;
-      font-weight: 700;
+    .nav__item--mobile-menu {
+      cursor: pointer;
+      display: none;
+      @media screen and (max-width: 850px) {
+        display: block;
+      }
     }
   }
 }
