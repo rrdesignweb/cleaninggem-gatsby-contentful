@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import { BLOCKS, MARKS } from "@contentful/rich-text-types"
+import { BLOCKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import "./services.styles.scss"
@@ -15,8 +15,6 @@ const Services = () => {
     },
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
-    },
-    renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: node => {
         const { title, file } = node.data.target.fields
         const alt = title["en-US"]
