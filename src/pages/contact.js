@@ -16,7 +16,8 @@ const ContactPage = () => (
       <div className="contact__form container__inner ">
         <p className="center">
           Please feel free to contact us for a hassle free quote or simply a
-          general enquiry on any of our services. We look forward to hearing from you.
+          general enquiry on any of our services. We look forward to hearing
+          from you.
         </p>
         <div className="contact__form--inner">
           <form
@@ -28,28 +29,34 @@ const ContactPage = () => (
           >
             <input type="hidden" name="form-name" value="contact" />
             <div className="field__hidden">
-              <label for="bot">Don't fill this out human</label>
-              <input name="bot" />
+              <label>
+                Don't fill this out human
+                <input name="bot" />
+              </label>
             </div>
             <div className="field__group">
-              <label for="name">Full Name</label>
-              <input type="text" name="name" />
+              <label>
+                Full name
+                <input type="text" name="name" />
+              </label>
             </div>
             <div className="field__group">
-              <label for="email">Email*</label>
-              <input type="email" name="email" />
+              <label>
+                Email*
+                <input type="email" name="email" />
+              </label>
             </div>
             <div className="field__group">
-              <label for="subject">Subject</label>
-              <input type="subject" name="subject" />
+              <label>
+                Subject
+                <input type="subject" name="subject" />
+              </label>
             </div>
             <div className="field__group">
-              <label for="message">Message*</label>
-              <textarea
-                type="text"
-                name="message"
-                rows="6"
-              />
+              <label>
+                Message*
+                <textarea type="text" name="message" rows="6" />
+              </label>
             </div>
             <div className="submit">
               <button type="submit" className="btn__med">
