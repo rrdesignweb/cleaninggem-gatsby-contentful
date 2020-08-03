@@ -7,6 +7,7 @@ import Sidebar from "../../components/sidebar/sidebar.component"
 
 const Nav = () => {
   const [open, setOpenMenu] = useState(false)
+  
   return (
     <nav>
       <div className="nav__wrapper">
@@ -27,7 +28,7 @@ const Nav = () => {
           <div className="nav__item--links-container">
             <Link
               className={
-                window.location.href.indexOf("services") > 0
+                typeof window !== 'undefined' && window.location.href.indexOf("services") > 0
                   ? "nav__item--link active"
                   : "nav__item--link"
               }
@@ -37,7 +38,7 @@ const Nav = () => {
             </Link>
             <Link
               className={
-                window.location.href.indexOf("testimonials") > 0
+                typeof window !== 'undefined' && window.location.href.indexOf("testimonials") > 0
                   ? "nav__item--link active"
                   : "nav__item--link"
               }
@@ -47,8 +48,8 @@ const Nav = () => {
             </Link>
             <Link
               className={
-                window.location.href.indexOf("blog") > 0 ||
-                window.location.href.indexOf("category") > 0
+                typeof window !== 'undefined' && window.location.href.indexOf("blog") > 0 ||
+                typeof window !== 'undefined' && window.location.href.indexOf("category") > 0
                   ? "nav__item--link active"
                   : "nav__item--link"
               }
@@ -58,7 +59,7 @@ const Nav = () => {
             </Link>
             <Link
               className={
-                window.location.href.indexOf("contact") > 0
+                typeof window !== 'undefined' && window.location.href.indexOf("contact") > 0
                   ? "nav__item--link active"
                   : "nav__item--link"
               }
