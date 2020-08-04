@@ -13,7 +13,12 @@ body {
     line-height: 24px;
     font-weight: 300;
   }
-
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
   .block__spacing {
     padding: 3rem 0 3rem 0;
   }

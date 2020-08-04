@@ -72,6 +72,7 @@ nav {
             border-bottom: none;
             margin-left: 0px;
             padding-bottom: 0px;
+            padding-right: 10px;
           }
           .nav__item--phone-number {
             padding-left: 10px;
@@ -90,6 +91,9 @@ nav {
       display: none;
       @media screen and (max-width: 850px) {
         display: block;
+        font-size: 22px;
+        color: $primaryGreen;
+        padding-left:10px;
       }
     }
   }
