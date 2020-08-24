@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from "gatsby"
 import { BLOCKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
-import "./home-about.styles.scss"
+import "./index.scss"
 
 const About = () => {
   const options = {

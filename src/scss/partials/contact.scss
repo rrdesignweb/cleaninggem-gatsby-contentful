@@ -1,4 +1,4 @@
-@import "../constants/_variables.styles.scss";
+@import "../config/variables";
 
 .contact__form--inner {
   display: grid;
@@ -15,8 +15,10 @@
       grid-template-columns: 1fr;
       display: grid;
       input {
+        margin-top:10px;
         height: 50px;
         width: 100%;
+        box-sizing: border-box;
         font-family: $bodyText;
         color: $lightGrey;
         font-size: 14px;

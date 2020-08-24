@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import "./header.styles.scss"
+import "./index.scss"
 
 const Header = ({ siteTitle }) => (
   <header className="header__wrapper container green block__spacing">

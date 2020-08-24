@@ -1,8 +1,11 @@
+@import "../../scss/config/_variables.scss";
+
 .img__alignCenter {
   margin: 0 auto;
   display: flex;
   justify-content: center;
 }
+
 ul {
   -webkit-column-count: 3;
   -moz-column-count: 3;
@@ -17,5 +20,14 @@ ul {
       margin-block-start: 0;
     }
   }
-  
+}
+
+.full-width {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25);
 }

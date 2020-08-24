@@ -2,7 +2,7 @@ import React from "react"
 import facebookIcon from "../../images/facebook.svg"
 import instagramIcon from "../../images/instagram.svg"
 
-import "./footer.styles.scss"
+import "./index.scss"
 
 const Footer = () => (
   <footer className="footer block__spacing">

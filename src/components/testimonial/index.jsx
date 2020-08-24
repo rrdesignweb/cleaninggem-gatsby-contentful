@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import "./testimonial.styles.scss"
+
+import "./index.scss"
 
 const Testimonial = () => {
   return (

@@ -1,9 +1,9 @@
 import React from "react"
-import Nav from "../components/nav/nav.component"
-import Layout from "../components/layout/layout.component"
-import Testimonial from "../components/testimonial/testimonial.component"
-import Header from "../components/header/header.component"
-import Footer from "../components/footer/footer.component"
+import Nav from "../components/nav/index"
+import Layout from "../components/layout/index"
+import Testimonial from "../components/testimonial/index"
+import Header from "../components/header/index"
+import Footer from "../components/footer/index"
 import SEO from "../components/seo"
 
 const TestimonialsPage = () => (

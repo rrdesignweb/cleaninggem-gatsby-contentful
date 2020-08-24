@@ -1,19 +1,20 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import "./sidebar.styles.scss"
+import "./index.scss"
 
 const Sidebar = ({ open, setOpenMenu }) => {
   return (
     <div id="sidebar" className={`sidebar ${open ? "active" : ""}`}>
-      <a
+      <span
+        role="button"
         className="sidebar-closebtn"
         onClick={() => {
           setOpenMenu(!open)
         }}
       >
         &times;
-      </a>
+      </span>
       <Link className="navbar__item-mobile" to="/services">
         Services
       </Link>

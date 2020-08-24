@@ -1,12 +1,13 @@
 import React from "react"
 import { Link, graphql, navigate } from "gatsby"
 import { window } from "browser-monads"
-import Nav from "../../components/nav/nav.component"
-import Layout from "../../components/layout/layout.component"
+import Nav from "../../components/nav/index"
+import Layout from "../../components/layout/index"
 import SEO from "../../components/seo"
-import Footer from "../../components/footer/footer.component"
-import "./blog-archive.styles.scss"
-import "../../components/home-blog/home-blog.styles.scss"
+import Footer from "../../components/footer/index"
+
+import "../../scss/partials/blog-archive.scss"
+import "../../components/home-blog/index.scss"
 
 export const pageQuery = graphql`
   query SustainabilityQuery($skip: Int!, $limit: Int!) {
@@ -40,7 +41,7 @@ export const pageQuery = graphql`
   }
 `
 
-const SustainabilityTemplate = props => {
+const SustainabilityTemplate = (props) => {
   const blogContent = props.data.allContentfulBlog
 
   const { currentPage, numPages } = props.pageContext
@@ -78,16 +79,6 @@ const SustainabilityTemplate = props => {
                 All
               </Link>
               <Link
-                to="/category/guides"
-                className={
-                  window.location.href.indexOf("/category/guides") > 0
-                    ? "archive__nav--link selected"
-                    : "archive__nav--link"
-                }
-              >
-                Guides
-              </Link>
-              <Link
                 to="/category/sustainability"
                 className={
                   window.location.href.indexOf("category/sustainability") > 0
@@ -96,6 +87,16 @@ const SustainabilityTemplate = props => {
                 }
               >
                 Sustainability
+              </Link>
+              <Link
+                to="/category/guides"
+                className={
+                  window.location.href.indexOf("/category/guides") > 0
+                    ? "archive__nav--link selected"
+                    : "archive__nav--link"
+                }
+              >
+                Guides
               </Link>
               <Link
                 to="/category/product"
@@ -122,8 +123,8 @@ const SustainabilityTemplate = props => {
         </div>
       </header>
       <Nav />
-      <div className="feed container">
-        {blogContent.nodes.map(node => (
+      <div className="feed feed-blog">
+        {blogContent.nodes.map((node) => (
           <div
             key={node.id}
             className="card"
@@ -140,7 +141,7 @@ const SustainabilityTemplate = props => {
             role="button"
             tabIndex={0}
           >
-            {node.category.map(category => (
+            {node.category.map((category) => (
               <p key={category.id} className="card__category">
                 {category.title}
               </p>

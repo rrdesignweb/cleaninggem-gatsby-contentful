@@ -1,18 +1,19 @@
 import React, { useState } from "react"
 import logo from "../../images/cleaninggem-logo.svg"
 import phoneIcon from "../../images/phone-icon.svg"
-import "./nav.styles.scss"
+import "./index.scss"
 import { Link } from "gatsby"
-import Sidebar from "../../components/sidebar/sidebar.component"
+import Sidebar from "../sidebar"
 
 const Nav = () => {
   const [open, setOpenMenu] = useState(false)
-  
+
   return (
     <nav>
       <div className="nav__wrapper">
         <div className="nav__items">
           <span
+            role="button"
             className="nav__item--mobile-menu"
             onClick={() => {
               setOpenMenu(!open)
@@ -28,7 +29,8 @@ const Nav = () => {
           <div className="nav__item--links-container">
             <Link
               className={
-                typeof window !== 'undefined' && window.location.href.indexOf("services") > 0
+                typeof window !== "undefined" &&
+                window.location.href.indexOf("services") > 0
                   ? "nav__item--link active"
                   : "nav__item--link"
               }
@@ -38,7 +40,8 @@ const Nav = () => {
             </Link>
             <Link
               className={
-                typeof window !== 'undefined' && window.location.href.indexOf("testimonials") > 0
+                typeof window !== "undefined" &&
+                window.location.href.indexOf("testimonials") > 0
                   ? "nav__item--link active"
                   : "nav__item--link"
               }
@@ -48,8 +51,10 @@ const Nav = () => {
             </Link>
             <Link
               className={
-                typeof window !== 'undefined' && window.location.href.indexOf("blog") > 0 ||
-                typeof window !== 'undefined' && window.location.href.indexOf("category") > 0
+                (typeof window !== "undefined" &&
+                  window.location.href.indexOf("blog") > 0) ||
+                (typeof window !== "undefined" &&
+                  window.location.href.indexOf("category") > 0)
                   ? "nav__item--link active"
                   : "nav__item--link"
               }
@@ -59,7 +64,8 @@ const Nav = () => {
             </Link>
             <Link
               className={
-                typeof window !== 'undefined' && window.location.href.indexOf("contact") > 0
+                typeof window !== "undefined" &&
+                window.location.href.indexOf("contact") > 0
                   ? "nav__item--link active"
                   : "nav__item--link"
               }
@@ -73,7 +79,7 @@ const Nav = () => {
             </a>
           </div>
         </div>
-        <Sidebar open={open} setOpenMenu={setOpenMenu}/>
+        <Sidebar open={open} setOpenMenu={setOpenMenu} />
       </div>
     </nav>
   )

@@ -7,6 +7,7 @@ module.exports = {
     title: `CleaningGem Melbourne - Carpet and Upholstery Cleaners`,
     description: `Let CleaningGem Melbourne be your next call for carpet and upholstery cleaning services. You will be surprised by our amazing quality of work and competitive rates. You will not be disappointed`,
     author: `@Rowan Richardson`,
+    siteUrl: `http://cleaninggem.com.au`,
   },
   plugins: [
     {
@@ -34,7 +35,37 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        query: `
+        {
+          wp {
+            generalSettings {
+              siteUrl
+            }
+          }
+
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+      }`,
+      resolveSiteUrl: ({site, allSitePage}) => {
+        //Alternativly, you may also pass in an environment variable (or any location) at the beginning of your `gatsby-config.js`.
+        return site.wp.generalSettings.siteUrl
+      },
+      serialize: ({ site, allSitePage }) =>
+        allSitePage.nodes.map(node => {
+          return {
+            url: `${site.wp.generalSettings.siteUrl}${node.path}`,
+            changefreq: `daily`,
+            priority: 0.7,
+          }
+        })
+      }
+    },
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,

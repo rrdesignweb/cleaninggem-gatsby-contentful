@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from "gatsby"
 import { BLOCKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
-import "./services.styles.scss"
+import "./index.scss"
 
 const Services = () => {
   const List = ({ children }) => <li>{children}</li>
@@ -19,7 +19,7 @@ const Services = () => {
         const { title, file } = node.data.target.fields
         const alt = title["en-US"]
         const url = file["en-US"].url
-        return <img alt={alt} src={url} />
+        return <img alt={alt} src={url} className="full-width"/>
       },
     },
   }

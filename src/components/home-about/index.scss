@@ -1,4 +1,4 @@
-@import "../../constants/_variables.styles.scss";
+@import "../../scss/config/_variables.scss";
 
 .about__column--wrapper {
   grid-template-columns: 1fr 1fr 1fr;
@@ -12,6 +12,6 @@
 
   @media (min-width: 320px) and (max-width: 800px) {
     grid-template-columns: 1fr;
-    width:100%;
+    width: 100%;
   }
 }

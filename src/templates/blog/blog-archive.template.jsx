@@ -1,12 +1,13 @@
 import React from "react"
 import { Link, graphql, navigate } from "gatsby"
 import { window } from "browser-monads"
-import Nav from "../../components/nav/nav.component"
-import Layout from "../../components/layout/layout.component"
+import Nav from "../../components/nav/index"
+import Layout from "../../components/layout/index"
 import SEO from "../../components/seo"
-import Footer from "../../components/footer/footer.component"
-import "./blog-archive.styles.scss"
-import "../../components/home-blog/home-blog.styles.scss"
+import Footer from "../../components/footer/index"
+
+import "../../scss/partials/blog-archive.scss"
+import "../../components/home-blog/index.scss"
 
 export const pageQuery = graphql`
   query ArchiveQuery($skip: Int!, $limit: Int!) {
@@ -71,16 +72,6 @@ const ArchiveTemplate = props => {
                 All
               </Link>
               <Link
-                to="/category/guides"
-                className={
-                  window.location.href.indexOf("/category/guides") > 0
-                    ? "archive__nav--link selected"
-                    : "archive__nav--link"
-                }
-              >
-                Guides
-              </Link>
-              <Link
                 to="/category/sustainability"
                 className={
                   window.location.href.indexOf("category/sustainability") > 0
@@ -89,6 +80,16 @@ const ArchiveTemplate = props => {
                 }
               >
                 Sustainability
+              </Link>
+              <Link
+                to="/category/guides"
+                className={
+                  window.location.href.indexOf("/category/guides") > 0
+                    ? "archive__nav--link selected"
+                    : "archive__nav--link"
+                }
+              >
+                Guides
               </Link>
               <Link
                 to="/category/product"
