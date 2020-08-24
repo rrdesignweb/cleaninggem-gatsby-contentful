@@ -35,37 +35,7 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
-    {
-      resolve: `gatsby-plugin-sitemap`,
-      options: {
-        query: `
-        {
-          wp {
-            generalSettings {
-              siteUrl
-            }
-          }
-
-          allSitePage {
-            nodes {
-              path
-            }
-          }
-      }`,
-      resolveSiteUrl: ({site, allSitePage}) => {
-        //Alternativly, you may also pass in an environment variable (or any location) at the beginning of your `gatsby-config.js`.
-        return site.wp.generalSettings.siteUrl
-      },
-      serialize: ({ site, allSitePage }) =>
-        allSitePage.nodes.map(node => {
-          return {
-            url: `${site.wp.generalSettings.siteUrl}${node.path}`,
-            changefreq: `daily`,
-            priority: 0.7,
-          }
-        })
-      }
-    },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
