@@ -19,7 +19,7 @@ const Services = () => {
         const { title, file } = node.data.target.fields
         const alt = title["en-US"]
         const url = file["en-US"].url
-        return <img alt={alt} src={url} className="right" />
+        return <img alt={alt} src={url} />
       },
     },
   }
