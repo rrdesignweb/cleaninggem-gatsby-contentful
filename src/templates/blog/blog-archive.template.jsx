@@ -6,7 +6,7 @@ import Layout from "../../components/layout/index"
 import SEO from "../../components/seo"
 import Footer from "../../components/footer/index"
 
-import "../../scss/partials/blog-archive.scss"
+import "../../scss/pages/blog-archive.scss"
 import "../../components/home-blog/index.scss"
 
 export const pageQuery = graphql`

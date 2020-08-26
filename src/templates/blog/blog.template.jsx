@@ -5,7 +5,7 @@ import Layout from "../../components/layout/index"
 import Footer from "../../components/footer/index"
 import SEO from "../../components/seo"
 
-import "../../scss/partials/blog-archive.scss"
+import "../../scss/pages/blog.scss"
 
 export const query = graphql`
   query BlogTemplate($id: String!) {

@@ -6,7 +6,7 @@ import Blog from "../components/home-blog/index"
 import Footer from "../components/footer/index"
 import Layout from "../components/layout/index"
 import SEO from "../components/seo"
-import "../scss/partials/home.scss"
+import "../scss/pages/home.scss"
 
 const IndexPage = () => {
   return (

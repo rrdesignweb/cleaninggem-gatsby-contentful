@@ -5,7 +5,7 @@ import Header from "../components/header/index"
 import Footer from "../components/footer/index"
 import SEO from "../components/seo"
 
-import "../scss/partials/contact.scss"
+import "../scss/pages/contact.scss"
 
 const ThanksPage = () => (
   <Layout>
