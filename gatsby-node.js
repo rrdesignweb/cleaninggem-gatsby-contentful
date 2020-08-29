@@ -235,7 +235,7 @@ module.exports.createPages = ({ actions, graphql }) => {
         path:
           i === 0 ? `/category/technology` : `/category/technology/${i + 1}`,
         component: path.resolve(
-          "./src/templates/blog/category-tech.template.jsx"
+          "./src/templates/blog/category-technology.template.jsx"
         ),
         context: {
           limit: blogsPerPage,
