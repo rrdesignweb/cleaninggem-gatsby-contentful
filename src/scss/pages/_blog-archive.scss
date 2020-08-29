@@ -1,7 +1,6 @@
-@import "../config/variables";
-
 .archive__section {
   margin: 0 auto;
+  
   .archive__hero {
     .archive__nav {
       display: flex;
@@ -9,7 +8,7 @@
       padding: 20px 20% 0 20%;
       justify-content: space-evenly;
       align-items: flex-end;
-      @media screen and (max-width: 800px) {
+      @include respond-to("xmedium") {
         display: flex;
         flex-direction:column;
         min-height: 200px;
@@ -21,11 +20,12 @@
     }
     .archive__nav--link {
       font-family: $bodyText;
-      font-size: 18px;
+      @include remCalc(18px);
       font-weight: 700;
       color: $primaryGreen;
       transition: all 0.3s ease 0s;
       text-decoration: none;
+      margin-bottom:10px;
       &::after {
         content: "";
         display: block;
@@ -33,7 +33,7 @@
         height: 3px;
         background: $primaryRed;
         transition: width 0.3s;
-        margin-top: 1rem;
+        margin-top: 0.65rem;
       }
       &:hover:after {
         width: 100%;

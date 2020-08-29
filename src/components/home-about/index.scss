@@ -1,17 +1,18 @@
-@import "../../scss/config/_variables.scss";
-
-.about__column--wrapper {
-  grid-template-columns: 1fr 1fr 1fr;
-  display: grid;
-  column-gap: 20px;
-  
-  .img__alignCenter {
-    margin: 0 auto;
-    display: flex;
-  }
-
-  @media (min-width: 320px) and (max-width: 800px) {
-    grid-template-columns: 1fr;
-    width: 100%;
+.HomeAbout {
+  .home-about__column--wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    column-gap: 20px;
+    
+    .img__alignCenter {
+      margin: 0 auto;
+      display: flex;
+    }
+    
+    @include respond-to("xmedium") { 
+      grid-template-columns: 1fr;
+      width: 100%;
+    }
   }
 }
+

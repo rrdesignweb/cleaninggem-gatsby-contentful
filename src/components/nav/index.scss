@@ -1,6 +1,4 @@
-@import "../../scss/config/_variables.scss";
-
-nav {
+.Nav {
   .nav__wrapper {
     background: $offwhite;
     position: fixed;
@@ -8,11 +6,11 @@ nav {
     left: 0;
     width: 100%;
     height: 100px;
-    z-index: 10000;
+    @include z-index(nav);
     overflow: visible;
     display: flex;
     flex-direction: row;
-    @media screen and (max-width: 850px) {
+    @include respond-to("xmedium") {
       height: 85px;
     }
     .nav__items {
@@ -23,32 +21,37 @@ nav {
       align-items: center;
       justify-content: space-between;
       padding: 0 10%;
-      @media screen and (max-width: 1024px) {
+      @include respond-to("xlarge") {
         padding: 0 4%;
       }
       margin: 0 auto;
       .nav__item--logo {
+        outline:none;
         img {
+          outline:none;
           height: 50px;
-          @media screen and (max-width: 960px) {
+          @include respond-to("large") {
             height: 42px;
           }
         }
       }
       .nav__item--links-container {
         .nav__item--link {
-          @media screen and (max-width: 850px) {
+          @include respond-to("xmedium") {
             display: none;
           }
           font-family: $bodyText;
-          font-size: 18px;
+          @include remCalc(18px);
           font-weight: 400;
           color: $primaryGreen;
           transition: all 0.3s ease 0s;
           text-decoration: none;
           margin-left: 40px;
+          @include respond-to("large") {
+            margin-left:25px;
+          }
+          
           &.active {
-            font-weight: 600;
             color: $primaryRed;
           }
           &:hover {
@@ -61,14 +64,14 @@ nav {
         .nav__item--phone {
           color: $primaryRed;
           font-family: $bodyText;
-          font-size: 18px;
+          @include remCalc(18px);
           font-weight: 700;
           transition: all 0.3s ease 0s;
           text-decoration: none;
           margin-left: 40px;
           border-bottom: 4px solid $primaryRed;
           padding-bottom: 35px;
-          @media screen and (max-width: 850px) {
+          @include respond-to("xmedium") {
             border-bottom: none;
             margin-left: 0px;
             padding-bottom: 0px;
@@ -76,7 +79,7 @@ nav {
           }
           .nav__item--phone-number {
             padding-left: 10px;
-            @media screen and (max-width: 850px) {
+            @include respond-to("xmedium") {
               display: none;
             }
             &:hover {
@@ -89,11 +92,11 @@ nav {
     .nav__item--mobile-menu {
       cursor: pointer;
       display: none;
-      @media screen and (max-width: 850px) {
+      @include respond-to("xmedium") {
         display: block;
-        font-size: 22px;
+        @include remCalc(22px);
         color: $primaryGreen;
-        padding-left:10px;
+        padding-left: 10px;
       }
     }
   }

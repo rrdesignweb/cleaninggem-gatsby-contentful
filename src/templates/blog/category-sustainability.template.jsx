@@ -6,9 +6,6 @@ import Layout from "../../components/layout/index"
 import SEO from "../../components/seo"
 import Footer from "../../components/footer/index"
 
-import "../../scss/pages/blog-archive.scss"
-import "../../components/home-blog/index.scss"
-
 export const pageQuery = graphql`
   query SustainabilityQuery($skip: Int!, $limit: Int!) {
     allContentfulBlog(
@@ -123,34 +120,35 @@ const SustainabilityTemplate = (props) => {
         </div>
       </header>
       <Nav />
-      <div className="feed feed-blog">
-        {blogContent.nodes.map((node) => (
-          <div
-            key={node.id}
-            className="card"
-            style={{
-              backgroundImage: `linear-gradient(
+      <div className="HomeBlog">
+        <div className="feed feed-blog">
+          {blogContent.nodes.map((node) => (
+            <div
+              key={node.id}
+              className="card"
+              style={{
+                backgroundImage: `linear-gradient(
           to bottom, 
           rgba(10,10,10,0) 0%,
           rgba(10,10,10,0) 50%,
           rgba(10,10,10,0.7) 100%),
           url(${node.featuredImage.fluid.src})`,
-            }}
-            onClick={() => navigate(`/blog/${node.slug}`)}
-            onKeyDown={() => navigate(`/blog/${node.slug}`)}
-            role="button"
-            tabIndex={0}
-          >
-            {node.category.map((category) => (
-              <p key={category.id} className="card__category">
-                {category.title}
-              </p>
-            ))}
-            <p className="card__title">{node.title}</p>
-          </div>
-        ))}
+              }}
+              onClick={() => navigate(`/blog/${node.slug}`)}
+              onKeyDown={() => navigate(`/blog/${node.slug}`)}
+              role="button"
+              tabIndex={0}
+            >
+              {node.category.map((category) => (
+                <p key={category.id} className="card__category">
+                  {category.title}
+                </p>
+              ))}
+              <p className="card__title">{node.title}</p>
+            </div>
+          ))}
+        </div>
       </div>
-
       <div className="pagination">
         <div className="pagination__item">
           {!isFirst && (

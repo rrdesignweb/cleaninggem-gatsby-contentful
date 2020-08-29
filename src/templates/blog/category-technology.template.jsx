@@ -7,10 +7,14 @@ import SEO from "../../components/seo"
 import Footer from "../../components/footer/index"
 
 export const pageQuery = graphql`
-  query ArchiveQuery($skip: Int!, $limit: Int!) {
+  query technologyQuery($skip: Int!, $limit: Int!) {
     allContentfulBlog(
       sort: { fields: [createdAt], order: DESC }
-      filter: { node_locale: { eq: "en-US" }, home: { eq: true } }
+      filter: {
+        node_locale: { eq: "en-US" }
+        category: { elemMatch: { title: { eq: "Technology" } } }
+      }
+
       skip: $skip
       limit: $limit
     ) {
@@ -34,15 +38,18 @@ export const pageQuery = graphql`
   }
 `
 
-const ArchiveTemplate = (props) => {
+const TechnologyTemplate = (props) => {
   const blogContent = props.data.allContentfulBlog
 
   const { currentPage, numPages } = props.pageContext
 
   const isFirst = currentPage === 1
   const isLast = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? `blog` : `blog/${currentPage - 1}`
-  const nextPage = `/blog/${currentPage + 1}`
+  const prevPage =
+    currentPage - 1 === 1
+      ? `blog`
+      : `category/technology/${currentPage - 1}`
+  const nextPage = `/category/technology/${currentPage + 1}`
 
   return (
     <Layout>
@@ -121,11 +128,11 @@ const ArchiveTemplate = (props) => {
               className="card"
               style={{
                 backgroundImage: `linear-gradient(
-              to bottom, 
-              rgba(10,10,10,0) 0%,
-              rgba(10,10,10,0) 50%,
-              rgba(10,10,10,0.7) 100%),
-              url(${node.featuredImage.fluid.src})`,
+          to bottom, 
+          rgba(10,10,10,0) 0%,
+          rgba(10,10,10,0) 50%,
+          rgba(10,10,10,0.7) 100%),
+          url(${node.featuredImage.fluid.src})`,
               }}
               onClick={() => navigate(`/blog/${node.slug}`)}
               onKeyDown={() => navigate(`/blog/${node.slug}`)}
@@ -163,4 +170,4 @@ const ArchiveTemplate = (props) => {
   )
 }
 
-export default ArchiveTemplate
+export default TechnologyTemplate

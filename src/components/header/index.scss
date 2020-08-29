@@ -1,16 +1,11 @@
-@import "../../scss/config/_variables.scss";
-
-.header__wrapper {
-  padding-top: 100px;
-  display: flex;
-  margin: 0 auto;
-  @media screen and (max-width: 960px) {
-    padding-top: 85px;
+.Header {
+  &.header__wrapper {
+    padding-top: 100px;
+    display: flex;
+    margin: 0 auto;
+    @include respond-to("large") { 
+      padding-top: 85px;
+    }
   }
-  // h1 {
-  //   @media screen and (max-width: 850px) {
-  //     font-size:32px;
-  //   }
-  // }
-  
 }
+

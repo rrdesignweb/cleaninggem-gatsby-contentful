@@ -3,8 +3,6 @@ import { graphql, StaticQuery } from "gatsby"
 import { BLOCKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
-import "./index.scss"
-
 const Services = () => {
   const List = ({ children }) => <li>{children}</li>
   const Text = ({ children }) => <p className="align-center">{children}</p>
@@ -41,7 +39,7 @@ const Services = () => {
         }
       `}
       render={data => (
-        <section>
+        <section className="Services">
           {data.allContentfulServices.nodes.map(node => (
             <div key={node.id} className="block__spacing container">
               <div>

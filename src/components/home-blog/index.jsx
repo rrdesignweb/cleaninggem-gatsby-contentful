@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, Link, navigate, StaticQuery } from "gatsby"
-import "./index.scss"
 
 export default () => (
   <StaticQuery
@@ -30,7 +29,7 @@ export default () => (
       }
     `}
     render={data => (
-      <section className="container__fluid green">
+      <section className="HomeBlog container__fluid green-bg">
         <div className="block__spacing container">
           <h1 className="section__title">CleaningGem Blog Feed</h1>
           <div className="feed">

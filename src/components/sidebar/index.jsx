@@ -1,11 +1,9 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import "./index.scss"
-
 const Sidebar = ({ open, setOpenMenu }) => {
   return (
-    <div id="sidebar" className={`sidebar ${open ? "active" : ""}`}>
+    <div id="sidebar" className={`Sidebar ${open ? "active" : ""}`}>
       <span
         role="button"
         className="sidebar-closebtn"

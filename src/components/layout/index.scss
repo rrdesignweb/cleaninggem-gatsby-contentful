@@ -1,15 +1,14 @@
-@import "../../scss/config/_variables.scss";
-
 body {
   background-color: $white;
   margin: 0;
   font-family: $bodyText;
+  @include fadeInPage();
 
   #main {
-    transition: margin-left 0.5s;
+   @include fadeInPage();
   }
   p {
-    font-size: 17px;
+    @include remCalc(17px);
     line-height: 24px;
     font-weight: 300;
   }
@@ -33,15 +32,20 @@ body {
     margin: 100px auto;
     padding: 0 10%;
     clear: both;
-    @media screen and (max-width: 850px) {
+    @include fadeInPage();
+    @include respond-to("xmedium") {
       margin: 80px auto;
     }
   }
 
   .container__inner {
     max-width: 960px;
-    margin: 30px auto;
-    padding: 0 10%;
+    margin: 0 auto;
+    padding: 30px 10% 0px 10%;
+    @include respond-to("xmedium") {
+      padding: 10px 10% 0px 10%;
+    }
+
   }
 
   .container__fluid {
@@ -50,7 +54,7 @@ body {
     justify-content: center;
   }
 
-  .green {
+  .green-bg {
     background-color: $primaryGreen;
     h1,
     p {
@@ -60,7 +64,7 @@ body {
 
   h1 {
     font-family: $headingText;
-    font-size: 48px;
+    @include remCalc(48px);
     font-weight: 400;
     line-height: 55px;
     color: $white;
@@ -68,14 +72,14 @@ body {
 
   h2 {
     font-family: $bodyText;
-    font-size: 30px;
+    @include remCalc(30px);
     font-weight: 400;
     line-height: 30px;
   }
 
   h3 {
     font-family: $headingText;
-    font-size: 24px;
+    @include remCalc(24px);
     font-weight: 400;
     color: $primaryGreen;
   }
@@ -99,7 +103,7 @@ body {
     color: $white;
     border: none;
     font-family: $bodyText;
-    font-size: 14px;
+    @include remCalc(14px);
     font-weight: 300;
     transition: all 0.3s ease 0s;
     cursor: pointer;

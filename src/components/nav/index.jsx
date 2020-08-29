@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import logo from "../../images/cleaninggem-logo.svg"
 import phoneIcon from "../../images/phone-icon.svg"
-import "./index.scss"
 import { Link } from "gatsby"
 import Sidebar from "../sidebar"
 
@@ -9,7 +8,7 @@ const Nav = () => {
   const [open, setOpenMenu] = useState(false)
 
   return (
-    <nav>
+    <nav className="Nav">
       <div className="nav__wrapper">
         <div className="nav__items">
           <span

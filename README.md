@@ -1,9 +1,12 @@
 <h1>
-  CleaningGem Melbourne - Gatsby / Contentful Live Site
+  CleaningGem Melbourne - Gatsby / Contentful Site
 </h1>
 
 Using Gatsby Default Starter Boilerplate with Contentful
 
+**Node Version**
+
+Developed on: v12.13.0
 
 1.  **Start developing.**
 

@@ -3,9 +3,7 @@ import { graphql, StaticQuery } from "gatsby"
 import { BLOCKS } from "@contentful/rich-text-types"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
-import "./index.scss"
-
-const About = () => {
+const HomeAbout = () => {
   const options = {
     renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: node => {
@@ -38,13 +36,13 @@ const About = () => {
         }
       `}
       render={data => (
-        <section>
+        <section className="HomeAbout">
           {data.allContentfulAbout.nodes.map(node => (
             <div key={node.id} className="block__spacing container">
               <div >
                 <h1 className="section__title">{node.title}</h1>
               </div>
-              <div className="about__column--wrapper">
+              <div className="home-about__column--wrapper">
                 <div>
                   {documentToReactComponents(node.columnOne.json, options)}
                 </div>
@@ -66,4 +64,4 @@ const About = () => {
   )
 }
 
-export default About
+export default HomeAbout

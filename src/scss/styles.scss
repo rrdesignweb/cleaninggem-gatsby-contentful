@@ -1,0 +1,27 @@
+//Config
+@import "config/variables";
+@import "config/layers";
+@import "config/mixins";
+
+//Pages
+@import "pages/blog";
+@import "pages/blog-archive.scss";
+@import "pages/contact";
+@import "pages/home";
+@import "pages/services";
+@import "pages/testimonials";
+
+//Components
+@import "../components/layout/index";
+@import "../components/contact-tabs/index";
+@import "../components/footer/index";
+@import "../components/google-map/index";
+@import "../components/header/index";
+@import "../components/home-about/index";
+@import "../components/home-blog/index";
+@import "../components/home-featured/index";
+@import "../components/nav/index";
+@import "../components/services/index";
+@import "../components/sidebar/index";
+@import "../components/testimonial/index";
+

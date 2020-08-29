@@ -4,9 +4,6 @@ import Nav from "../../components/nav/index"
 import Layout from "../../components/layout/index"
 import Footer from "../../components/footer/index"
 import SEO from "../../components/seo"
-
-import "../../scss/pages/blog.scss"
-
 export const query = graphql`
   query BlogTemplate($id: String!) {
     contentfulBlog(id: { eq: $id }) {

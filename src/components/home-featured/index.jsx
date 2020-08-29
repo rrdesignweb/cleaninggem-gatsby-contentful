@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql, navigate, StaticQuery } from "gatsby"
 
-import "./index.scss"
-
 export default () => (
   <StaticQuery
     query={graphql`
@@ -29,19 +27,19 @@ export default () => (
       }
     `}
     render={data => (
-      <header>
+      <header className="HomeFeatured">
         {data.allContentfulHero.nodes.map(node => (
-          <div key={node.id} className="header__section container">
+          <div key={node.id} className="home-featured__section container">
             <div
-              className="header__hero"
+              className="home-featured__hero"
               style={{
                 backgroundImage: `url(${node.heroImage.fluid.src})`,
               }}
             ></div>
-            <div className="header__content">
-              <div className="header__info">
-                <h1 className="header__title">{node.title}</h1>
-                <p className="header__subtitle">{node.subTitle}</p>
+            <div className="home-featured__content">
+              <div className="home-featured__info">
+                <h1 className="home-featured__title">{node.title}</h1>
+                <p className="home-featured__subtitle">{node.subTitle}</p>
                 <button
                   onClick={() => navigate(`/${node.slug}`)}
                   className="btn__med"

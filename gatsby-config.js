@@ -17,7 +17,12 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ["/src/scss/styles.scss"],
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -32,7 +37,13 @@ module.exports = {
         fonts: [`baskerville\:400`, `muli\:300,700`],
       },
     },
-    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-source-googlemaps-static`,
+      options: {
+          key: process.env.GOOGLE_MAPS_STATIC_API_KEY,
+          center: `New York, NY`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sitemap`,

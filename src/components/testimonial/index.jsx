@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 
-import "./index.scss"
-
 const Testimonial = () => {
   return (
     <StaticQuery
@@ -23,7 +21,7 @@ const Testimonial = () => {
         }
       `}
       render={data => (
-        <section className="testimonial__wrapper container__inner">
+        <section className="Testimonial testimonial__wrapper container__inner">
           {data.allContentfulTestimonial.nodes.map(node => (
             <div key={node.id}>
               <div

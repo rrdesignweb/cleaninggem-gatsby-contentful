@@ -1,8 +1,6 @@
-@import "../config/variables";
-
 .view__more {
   font-family: $bodyText;
-  font-size: 18px;
+  @include remCalc(18px);
   line-height: 24px;
   color: $primaryGreen;
   text-align: center;

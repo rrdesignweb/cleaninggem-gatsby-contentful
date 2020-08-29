@@ -1,0 +1,62 @@
+.ContactTabs {
+    @include respond-to("medium") { 
+        display:none;
+    }
+    .phone-tab {
+        position: fixed;
+        width: 290px;
+        left: 0px;
+        top: 260px;
+        @include remCalc(18px);
+        font-weight: 700;
+        color: $primaryRed;
+        @include z-index(contactTabs);
+        user-select: none;
+        left: -140px;
+        transition: left 0.5s linear;
+        &:hover {
+            left:0;
+        }
+        .phone-tab-info {
+            width: 150px;
+            height: 100%;
+            background-color: $primaryRed;
+            padding: 13px 0px 14px 16px;
+            a {
+                @include remCalc(18px);
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+        .phone-tab-toggle {
+            background: $primaryRed;
+            position: absolute;
+            left: 139px;
+            top: 0px;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            @include remCalc(19px);
+            color: #fff;
+        }
+    }
+    .email-tab {
+        position: fixed;
+        @include z-index(contactTabs);
+        top: 310px;
+        left: -1px;
+        transition: all 0.3s ease-in-out 0s;
+        a {
+            background: $dark;
+            display: block;
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            line-height: 50px;
+            @include remCalc(19px);
+            color: #fff;
+        }
+    }
+}

@@ -1,12 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
+import ContactTabs from "../contact-tabs/index";
 
-import "./index.scss"
+//Global Styles
+import "../../scss/styles.scss"
 
 const Layout = ({ children }) => {
   return (
     <>
       <main>{children}</main>
+      <ContactTabs />
     </>
   )
 }

@@ -83,7 +83,7 @@ module.exports.createPages = ({ actions, graphql }) => {
     })
   })
 
-  // Create travel category page, including pagination
+  // Create guide category page, including pagination
   const getGuide = makeRequest(
     graphql,
     `
@@ -92,7 +92,7 @@ module.exports.createPages = ({ actions, graphql }) => {
           sort: { fields: [createdAt], order: DESC }
           filter: {
             node_locale: { eq: "en-US" }
-            category: { elemMatch: { title: { eq: "Guide" } } }
+            category: { elemMatch: { title: { eq: "Guides" } } }
           }
         ) {
           nodes {
@@ -109,7 +109,7 @@ module.exports.createPages = ({ actions, graphql }) => {
 
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
-        path: i === 0 ? `/category/guide` : `/category/guide/${i + 1}`,
+        path: i === 0 ? `/category/guides` : `/category/guides/${i + 1}`,
         component: path.resolve(
           "./src/templates/blog/category-guide.template.jsx"
         ),
@@ -123,7 +123,7 @@ module.exports.createPages = ({ actions, graphql }) => {
     })
   })
 
-  // Create guide category page, including pagination
+  // Create sustainability category page, including pagination
   const getSustainability = makeRequest(
     graphql,
     `
@@ -166,7 +166,7 @@ module.exports.createPages = ({ actions, graphql }) => {
     })
   })
 
-  // Create opinion category page, including pagination
+  // Create product category page, including pagination
   const getProduct = makeRequest(
     graphql,
     `

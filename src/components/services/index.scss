@@ -1,33 +1,30 @@
-@import "../../scss/config/_variables.scss";
-
-.img__alignCenter {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-
-ul {
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  column-count: 3;
-  @media (max-width: 800px) {
-    -webkit-column-count: 1;
-    -moz-column-count: 1;
-    column-count: 1;
+.Services {
+  .img__alignCenter {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
-  li {
-    p {
-      margin-block-start: 0;
+  
+  ul {
+    column-count: 3;
+    @include respond-to("xmedium") {
+      column-count: 1;
+    }
+    li {
+      p {
+        margin-block-start: 0;
+      }
     }
   }
+  
+  .full-width {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25);
+  }
 }
 
-.full-width {
-  margin: 0 auto;
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.25);
-}
