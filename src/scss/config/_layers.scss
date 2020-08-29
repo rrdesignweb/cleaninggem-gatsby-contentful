@@ -1,6 +1,6 @@
 $z-index: (
-    nav: 400,
-    contactTabs: 300,
+    nav: 9999,
+    contactTabs: 9999,
 );
 
 @function z-index($key) {
