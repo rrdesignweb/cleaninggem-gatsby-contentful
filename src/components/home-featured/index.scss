@@ -35,7 +35,7 @@
   }
 
   .home-featured__info {
-    max-width: 500px;
+    max-width: 540px;
     margin-top: 40px;
   }
 
@@ -45,7 +45,6 @@
 
   .home-featured__subtitle {
     font-family: $bodyText;
-    @include remCalc(15px);
     line-height: 24px;
     font-weight: 300;
     color: $white;

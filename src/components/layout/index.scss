@@ -7,10 +7,27 @@ body {
   #main {
    @include fadeInPage();
   }
+
   p {
     @include remCalc(17px);
-    line-height: 24px;
+    line-height: 27px;
     font-weight: 300;
+  }
+
+  h1 {
+    @include h1();
+  }
+
+  h2 {
+    @include h2();
+  }
+
+  h3 {
+    @include h3();
+  }
+  
+  h4 {
+    @include h4();
   }
   
   img {
@@ -62,27 +79,6 @@ body {
     }
   }
 
-  h1 {
-    font-family: $headingText;
-    @include remCalc(48px);
-    font-weight: 400;
-    line-height: 55px;
-    color: $white;
-  }
-
-  h2 {
-    font-family: $bodyText;
-    @include remCalc(30px);
-    font-weight: 400;
-    line-height: 30px;
-  }
-
-  h3 {
-    font-family: $headingText;
-    @include remCalc(24px);
-    font-weight: 400;
-    color: $primaryGreen;
-  }
 
   .center {
     text-align: center;
@@ -96,14 +92,16 @@ body {
   }
 
   .btn__med {
-    width: 124px;
-    height: 38px;
+    min-width: 124px;
+    height: 50px;
     border-radius: 5px;
     background-color: $primaryRed;
     color: $white;
     border: none;
     font-family: $bodyText;
-    @include remCalc(14px);
+    padding-left:20px;
+    padding-right:20px;
+    @include remCalc(16px);
     font-weight: 300;
     transition: all 0.3s ease 0s;
     cursor: pointer;

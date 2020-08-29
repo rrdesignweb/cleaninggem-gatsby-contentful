@@ -58,3 +58,33 @@ $breakpoints: (
     padding: 0;
     margin: 0;
 }
+
+@mixin h1() {
+    font-family: $headingText;
+    @include remCalc(44px);
+    font-weight: 400;
+    line-height: 55px;
+    color: $white;
+}
+
+@mixin h2() {
+    font-family: $bodyText;
+    @include remCalc(30px);
+    font-weight: 400;
+    line-height: 30px;
+}
+
+@mixin h3() {
+    font-family: $headingText;
+    @include remCalc(24px);
+    font-weight: 400;
+    color: $primaryGreen;
+}
+
+@mixin h4() {
+    font-family: $bodyText;
+    @include remCalc(20px);
+    font-weight: 700;
+    color: $dark;
+}
+

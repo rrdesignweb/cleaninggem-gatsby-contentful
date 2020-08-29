@@ -46,7 +46,7 @@ const Services = () => {
                 <h1 className="section__title">{node.title}</h1>
               </div>
               <div>
-                <div>{node.subTitle}</div>
+                <p>{node.subTitle}</p>
               </div>
               <div>{documentToReactComponents(node.content.json, options)}</div>
             </div>

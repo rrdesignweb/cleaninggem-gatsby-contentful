@@ -34,7 +34,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`baskerville\:400`, `muli\:300,700`],
+        fonts: [`prata\:400`, `muli\:300,700`],
       },
     },
     `gatsby-transformer-sharp`,
