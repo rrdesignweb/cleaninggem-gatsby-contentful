@@ -37,13 +37,6 @@ module.exports = {
         fonts: [`baskerville\:400`, `muli\:300,700`],
       },
     },
-    {
-      resolve: `gatsby-source-googlemaps-static`,
-      options: {
-          key: process.env.GOOGLE_MAPS_STATIC_API_KEY,
-          center: `New York, NY`,
-      },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sitemap`,

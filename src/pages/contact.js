@@ -4,14 +4,12 @@ import Layout from "../components/layout/index"
 import Header from "../components/header/index"
 import Footer from "../components/footer/index"
 import SEO from "../components/seo"
-// import GoogleMap from "../components/google-map/index"
 
 const ContactPage = () => (
   <Layout>
     <SEO title="Contact Page" />
     <Nav />
     <Header siteTitle="Contact Us" />
-    
       <section className="container">
       <div className="contact__form container__inner ">
         <p className="center">
