@@ -18,10 +18,14 @@ export default () => (
             slug
             heroImage {
              fluid(maxWidth: 1200, quality: 85) {
+                ...GatsbyContentfulFluid
                 src
                 srcSet
-                ...GatsbyContentfulFluid
-                avif: src(transform: { format: AVIF })  // Add this line for AVIF support
+              }
+              // Add AVIF support here
+              avif: fluid(maxWidth: 1200, quality: 85, transform: { format: AVIF }) {
+                src
+                srcSet
               }
             }
           }
@@ -35,7 +39,7 @@ export default () => (
             <div
               className="home-featured__hero"
               style={{
-                backgroundImage: `url(${node.heroImage.fluid.src}), url(${node.heroImage.fluid.src.replace('.jpg', '.avif')})`,
+                backgroundImage: `url(${node.heroImage.fluid.src})`,
               }}
             ></div>
             <div className="home-featured__content">
