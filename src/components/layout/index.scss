@@ -2,11 +2,7 @@ body {
   background-color: $white;
   margin: 0;
   font-family: $bodyText;
-  @include fadeInPage();
 
-  #main {
-   @include fadeInPage();
-  }
 
   p {
     @include remCalc(17px);
@@ -49,7 +45,6 @@ body {
     margin: 90px auto;
     padding: 0 10%;
     clear: both;
-    @include fadeInPage();
     @include respond-to("xmedium") {
       margin: 80px auto;
     }
