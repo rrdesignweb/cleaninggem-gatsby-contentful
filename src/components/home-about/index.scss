@@ -4,6 +4,10 @@
     display: grid;
     column-gap: 20px;
     
+    .h2 {
+      @include h3();
+    }
+    
     .img__alignCenter {
       margin: 0 auto;
       display: flex;

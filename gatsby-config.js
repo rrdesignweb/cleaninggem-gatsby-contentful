@@ -32,11 +32,27 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-preload-fonts`,
       options: {
-        fonts: [`prata\:400`, `muli\:300,700`],
+        fonts: [
+          {
+            family: `Prata`,
+            variants: [`400`],
+          },
+          {
+            family: `Muli`,
+            variants: [`300`, `700`],
+          },
+        ],
       },
     },
+    // Remove the old google fonts plugin
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [`prata\:400`, `muli\:300,700`],
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sitemap`,
