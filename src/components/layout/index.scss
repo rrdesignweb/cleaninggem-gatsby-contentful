@@ -21,16 +21,16 @@ body {
   h3 {
     @include h3();
   }
-  
+
   h4 {
     @include h4();
   }
-  
+
   img {
     max-width: 100%;
     height: auto;
   }
-  
+
   .block__spacing {
     padding: 3rem 0 3rem 0;
   }
@@ -45,6 +45,7 @@ body {
     margin: 90px auto;
     padding: 0 10%;
     clear: both;
+
     @include respond-to("xmedium") {
       margin: 80px auto;
     }
@@ -54,6 +55,7 @@ body {
     max-width: 960px;
     margin: 0 auto;
     padding: 30px 10% 0px 10%;
+
     @include respond-to("xmedium") {
       padding: 10px 10% 0px 10%;
     }
@@ -68,6 +70,9 @@ body {
 
   .green-bg {
     background-color: $primaryGreen;
+    clip-path: inset(0 -100vmax 0 -100vmax);
+    box-shadow: 0 100vmax 0 100vmax $primaryGreen;
+
     h1,
     p {
       color: $white;
@@ -94,12 +99,13 @@ body {
     color: $white;
     border: none;
     font-family: $bodyText;
-    padding-left:20px;
-    padding-right:20px;
+    padding-left: 20px;
+    padding-right: 20px;
     @include remCalc(16px);
     font-weight: 300;
     transition: all 0.3s ease 0s;
     cursor: pointer;
+
     &:hover {
       filter: brightness(90%);
     }

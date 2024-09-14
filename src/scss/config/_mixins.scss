@@ -8,21 +8,6 @@
     font-size: calculateRem($size);
 }
 
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@mixin fadeInPage() {
-    animation: fadeInAnimation ease 0.75s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
 $breakpoints: (
     "xsmall": 0px,
     "small": 320px,
@@ -65,6 +50,9 @@ $breakpoints: (
     font-weight: 400;
     line-height: 55px;
     color: $white;
+    @include respond-to("small") {
+        @include remCalc(36px);
+    }
 }
 
 @mixin h2() {
