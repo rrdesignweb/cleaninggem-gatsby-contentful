@@ -12,7 +12,7 @@ const Footer = () => (
         <img className="instagram" src={instagramIcon} alt="Instagram" />
       </a>
     </div>
-    <p>Copyright © 2020 CleaningGem Melbourne</p>
+    <p>Copyright © 2020-{new Date().getFullYear()} CleaningGem Melbourne</p>
   </footer>
 )
 
