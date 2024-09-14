@@ -36,17 +36,21 @@ export default () => (
                 // Removed inline background image style
               }}
             >
-              <picture>
-                <source type="image/avif" srcSet={`${node.heroImage.fluid.src}?fm=avif`} />
-                <source type="image/webp" srcSet={`${node.heroImage.fluid.src}?fm=webp`} />
-                <img
-                  src={node.heroImage.fluid.src}
-                  alt={node.title}
-                  loading="lazy"
-                  decoding="async"
-                  style={{ width: '100%', height: 'auto' }} // Ensure responsive image
-                />
-              </picture>
+              {node.heroImage && node.heroImage.fluid ? ( // Check if heroImage and fluid exist
+                <picture>
+                  <source type="image/avif" srcSet={`${node.heroImage.fluid.src}?fm=avif`} />
+                  <source type="image/webp" srcSet={`${node.heroImage.fluid.src}?fm=webp`} />
+                  <img
+                    src={node.heroImage.fluid.src}
+                    alt={node.title}
+                    loading="lazy"
+                    decoding="async"
+                    style={{ width: '100%', height: 'auto' }} // Ensure responsive image
+                  />
+                </picture>
+              ) : (
+                <div>No image available</div> // Fallback if no image
+              )}
             </div>
             <div className="home-featured__content">
               <div className="home-featured__info">
