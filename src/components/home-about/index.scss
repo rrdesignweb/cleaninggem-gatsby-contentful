@@ -4,7 +4,7 @@
     display: grid;
     column-gap: 20px;
 
-    .h2 {
+    h2 {
       font-family: $headingText;
       @include remCalc(24px);
       font-weight: 400;
