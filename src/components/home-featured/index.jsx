@@ -33,7 +33,7 @@ export default () => (
             <div
               className="home-featured__hero"
               style={{
-                backgroundImage: `url(${node.heroImage.fluid.src}?fm=avif)`,
+                backgroundImage: `url(${node.heroImage.fluid.src})`,
               }}
             ></div>
             <div className="home-featured__content">
