@@ -17,15 +17,9 @@ export default () => (
             buttonText
             slug
             heroImage {
-             fluid(maxWidth: 1200, quality: 85) {
+              fluid(maxWidth: 1200, quality: 85) {
+                src
                 ...GatsbyContentfulFluid
-                src
-                srcSet
-              }
-              // Add AVIF support here
-              avif: fluid(maxWidth: 1200, quality: 85, transform: { format: AVIF }) {
-                src
-                srcSet
               }
             }
           }
@@ -39,9 +33,21 @@ export default () => (
             <div
               className="home-featured__hero"
               style={{
-                backgroundImage: `url(${node.heroImage.fluid.src})`,
+                // Removed inline background image style
               }}
-            ></div>
+            >
+              <picture>
+                <source type="image/avif" srcSet={`${node.heroImage.fluid.src}?fm=avif`} />
+                <source type="image/webp" srcSet={`${node.heroImage.fluid.src}?fm=webp`} />
+                <img
+                  src={node.heroImage.fluid.src}
+                  alt={node.title}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: '100%', height: 'auto' }} // Ensure responsive image
+                />
+              </picture>
+            </div>
             <div className="home-featured__content">
               <div className="home-featured__info">
                 <h1 className="home-featured__title">{node.title}</h1>
