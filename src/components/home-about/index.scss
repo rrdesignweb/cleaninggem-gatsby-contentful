@@ -3,20 +3,22 @@
     grid-template-columns: 1fr 1fr 1fr;
     display: grid;
     column-gap: 20px;
-    
+
     .h2 {
-      @include h3();
+      font-family: $headingText;
+      @include remCalc(24px);
+      font-weight: 400;
+      color: $primaryGreen;
     }
-    
+
     .img__alignCenter {
       margin: 0 auto;
       display: flex;
     }
-    
-    @include respond-to("xmedium") { 
+
+    @include respond-to("xmedium") {
       grid-template-columns: 1fr;
       width: 100%;
     }
   }
 }
-
